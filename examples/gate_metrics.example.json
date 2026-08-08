@@ -1,0 +1,28 @@
+{
+  "baseline": "C0",
+  "models": {
+    "C0": {
+      "native": {"map50_95": 0.8000},
+      "competition": {
+        "overall": {"recall": 0.95, "false_alarm_rate": 0.04},
+        "groups": {
+          "ship": {"f1": 0.91},
+          "aircraft": {"f1": 0.99},
+          "vehicle": {"f1": 0.78}
+        }
+      }
+    },
+    "FAH_KD": {
+      "native": {"map50_95": 0.8010},
+      "competition": {
+        "overall": {"recall": 0.95, "false_alarm_rate": 0.04},
+        "groups": {
+          "ship": {"f1": 0.918},
+          "aircraft": {"f1": 0.988},
+          "vehicle": {"f1": 0.792}
+        }
+      },
+      "evidence": {"kd_health": true, "deploy_parity": true}
+    }
+  }
+}

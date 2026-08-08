@@ -1,0 +1,3 @@
+image,source,scene_id,cluster_id
+official_example_crop1.jpg,official,L00000000001,official:L00000000001
+added_example_crop1.jpg,added,added_scene_001,added:added_scene_001

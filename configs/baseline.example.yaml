@@ -1,0 +1,15 @@
+dataset_id: scene811_v2
+data: /root/fhit-kd-yolo11m/artifacts/scene811_v2/split/dataset.yaml
+epochs: 120
+imgsz: 640
+batch: 16
+workers: 4
+device: 0
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+weight_decay: 0.0005
+warmup_epochs: 3.0
+patience: 30
+save_period: -1
+seed: 0
