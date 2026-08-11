@@ -262,8 +262,12 @@ def create_cache_fixture(tmp_path: Path) -> tuple[dict, dict, Path, dict]:
             "cache_manifest_fingerprint": manifest["compatibility_fingerprint"],
             "boxes_xywhn": torch.zeros((1, 4)),
             "classes": torch.tensor([24]),
-            "roi_logits": torch.zeros((1, 25)),
-            "roi_embeddings": torch.zeros((1, 512)),
+            # A valid teacher cache fixture must pass the production prototype
+            # confidence, margin and coarse-class gates.
+            "roi_logits": torch.nn.functional.one_hot(
+                torch.tensor([24]), num_classes=25
+            ).float() * 20.0,
+            "roi_embeddings": torch.ones((1, 512)),
             "p3": torch.zeros((1, 1, 1)),
             "p4": torch.zeros((1, 1, 1)),
             "p5": torch.zeros((1, 1, 1)),
