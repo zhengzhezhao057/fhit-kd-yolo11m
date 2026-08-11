@@ -39,7 +39,7 @@ def test_baseline_matrix_is_portable_and_has_two_matched_recipes(tmp_path: Path)
         (dataset / name).write_text("train: train.txt\nval: images/val\n", encoding="utf-8")
     (dataset / "split_manifest.csv").write_text("split,image\n", encoding="utf-8")
     baseline_template = tmp_path / "baseline.yaml"
-    baseline_template.write_text("optimizer: AdamW\n", encoding="utf-8")
+    baseline_template.write_text("optimizer: AdamW\npatience: 0\n", encoding="utf-8")
     experiment_template = tmp_path / "experiment.yaml"
     experiment_template.write_text("dataset: {}\n", encoding="utf-8")
     output = tmp_path / "generated"
@@ -57,6 +57,7 @@ def test_baseline_matrix_is_portable_and_has_two_matched_recipes(tmp_path: Path)
     assert {item["seed"] for item in result["baseline_trials"]} == {42, 3407, 20260809}
     generated = yaml.safe_load((output / "baseline_mix_seed42.yaml").read_text("utf-8"))
     assert generated["dataset_id"] == "scene811_v3_grouped_clean_r10"
+    assert generated["patience"] == 0
     assert generated["dataset_fingerprint"] == FINGERPRINT
     assert generated["data"] == str((dataset / "dataset.yaml").resolve())
 
