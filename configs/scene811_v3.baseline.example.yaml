@@ -1,0 +1,17 @@
+# Portable template. Machine paths are injected by
+# ``python -m src.prepare_scene811_v3_configs``.
+dataset_id: scene811_v3_grouped_clean_r10
+data: /absolute/path/generated/by/the/config/generator.yaml
+epochs: 120
+imgsz: 640
+batch: 16
+workers: 4
+device: 0
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+weight_decay: 0.0005
+warmup_epochs: 3.0
+patience: 30
+save_period: -1
+seed: 42

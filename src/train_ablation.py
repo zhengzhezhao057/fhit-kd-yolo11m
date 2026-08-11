@@ -10,24 +10,79 @@ from .distill_trainer import (
     ReplayDetectionTrainer,
     kd_objective_fingerprint,
 )
+from .provenance import (
+    artifact_namespace,
+    portable_dataset_identity,
+    prepare_run_lineage,
+    resolve_dataset_identity,
+    student_runs_root,
+    teacher_cache_dir,
+    validate_cache_manifest,
+    verify_cache_sample,
+    file_sha256,
+)
+from .prototype_bank import PrototypeBank
+
+
+FHIT_V2_EXPERIMENTS = {"g", "p", "gp"}
+
+
+def require_fhit_cache_manifest(
+    manifest: dict, experiment: str, *, prototype_dim: int = 512
+) -> None:
+    """Reject legacy caches before a G/P/GP run can silently degrade."""
+
+    if experiment not in FHIT_V2_EXPERIMENTS:
+        return
+    if manifest.get("format") != 3:
+        raise RuntimeError(
+            f"{experiment.upper()} requires cache format=3 provenance; rebuild the V3 teacher cache."
+        )
+    if experiment in {"p", "gp"} and int(manifest.get("roi_embedding_dim", 0)) != int(prototype_dim):
+        raise RuntimeError(
+            f"{experiment.upper()} requires {prototype_dim}-D cached penultimate roi_embeddings; "
+            "the selected cache is old or incompatible."
+        )
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Run C0/F/K/FK fair continuation experiments from the fixed YOLO11m baseline.")
+    parser = argparse.ArgumentParser(description="Run legacy C0/F/K/FK or FHiT-KD v2 G/P/GP continuation experiments.")
     parser.add_argument("--config", default="configs/experiment.yaml")
-    parser.add_argument("--exp", required=True, choices=("c0", "f", "k", "fk", "e0", "e1", "e2", "e3"), help="e0/e1/e2/e3 are backward-compatible aliases for c0/f/k/fk.")
-    parser.add_argument("--cache", default=None, help="Teacher train cache. Required for f/k/fk.")
-    parser.add_argument("--resume", nargs="?", const="auto", default=None, help="Resume the full Ultralytics last.pt checkpoint. Omit a value to use runs/<exp>/weights/last.pt.")
-    parser.add_argument("--run-name", default=None, help="Exact directory under runs/. Defaults to c0/f/k/fk; never auto-increments names.")
+    parser.add_argument("--exp", required=True, choices=("c0", "f", "k", "fk", "g", "p", "gp", "e0", "e1", "e2", "e3"), help="e0/e1/e2/e3 are backward-compatible aliases for c0/f/k/fk.")
+    parser.add_argument("--cache", default=None, help="Teacher train cache. Required for every KD experiment.")
+    parser.add_argument("--prototype-bank", default=None, help="Validated V3 leave-one-scene-out bank. Required for p/gp; overrides distillation.prototype_bank.")
+    parser.add_argument("--resume", nargs="?", const="auto", default=None, help="Resume the full Ultralytics last.pt checkpoint. V3 resolves it inside the dataset-fingerprint namespace.")
+    parser.add_argument("--run-name", default=None, help="Exact directory under the dataset-namespaced runs root. Defaults to the experiment name; never auto-increments names.")
     parser.add_argument("--epochs", type=int, default=None, help="Override student epochs, useful for a 1-epoch KD health check.")
     parser.add_argument("--health-batches", type=int, default=None, help="KD smoke test: stop cleanly after this many batches (must be >= health patience).")
     args = parser.parse_args()
     aliases = {"e0": "c0", "e1": "f", "e2": "k", "e3": "fk"}
     experiment = aliases.get(args.exp, args.exp)
-    cfg = load_config(args.config); cfg["runtime"] = {"experiment": experiment, "health_batches": args.health_batches}
+    cfg = load_config(args.config)
+    identity = resolve_dataset_identity(cfg)
+    cfg["runtime"] = {
+        "experiment": experiment,
+        "health_batches": args.health_batches,
+        "dataset_identity": identity,
+        "artifact_namespace": artifact_namespace(identity),
+    }
+    if experiment in FHIT_V2_EXPERIMENTS and not identity.get("strict"):
+        raise RuntimeError(
+            "G/P/GP require a fingerprint-enforced V3 dataset with split_manifest.scene_id."
+        )
+    if args.prototype_bank:
+        cfg["distillation"]["prototype_bank"] = args.prototype_bank
     from ultralytics import YOLO
     root = Path(cfg["paths"]["project_root"]); student_cfg = cfg["student"]
-    output = root / "runs"; run_name = args.run_name or experiment
+    if experiment in {"p", "gp"} and not cfg["distillation"].get("prototype_bank"):
+        cfg["distillation"]["prototype_bank"] = str(
+            root
+            / "cache"
+            / "prototype_banks"
+            / artifact_namespace(identity)
+            / "leave_one_scene_out.pt"
+        )
+    output = student_runs_root(cfg, identity); run_name = args.run_name or experiment
     if Path(run_name).name != run_name:
         raise ValueError("--run-name must be a single directory name, not a path.")
     run_dir = output / run_name
@@ -48,7 +103,7 @@ def main() -> None:
             raise FileExistsError(f"{run_dir} already exists. Choose a new explicit --run-name or use --resume; automatic '-2' directories are forbidden.")
         model = YOLO(cfg["paths"]["baseline_weights"])
     if experiment != "c0":
-        cache_dir = Path(args.cache) if args.cache else root / "cache" / "teacher_signals" / "train"
+        cache_dir = Path(args.cache) if args.cache else teacher_cache_dir(cfg, "train", identity)
         if not cache_dir.exists():
             raise FileNotFoundError(f"Teacher cache missing: {cache_dir}. Run cache_teacher_signals.py first.")
         manifest = cache_dir / "manifest.json"
@@ -58,28 +113,68 @@ def main() -> None:
             manifest_data = json.loads(manifest.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError) as error:
             raise RuntimeError(f"Invalid teacher cache manifest {manifest}: {error}") from error
-        expected_manifest = {
-            "format": 2,
-            "split": "train",
-            "image_size": int(cfg["dataset"]["image_size"]),
-            "feature_channels": int(cfg["teacher"]["feature_channels"]),
-            "num_classes": int(cfg["dataset"]["nc"]),
-        }
-        mismatches = {key: (manifest_data.get(key), value) for key, value in expected_manifest.items() if manifest_data.get(key) != value}
-        if mismatches:
-            raise RuntimeError(f"Teacher cache manifest is incompatible with this experiment: {mismatches}")
+        validate_cache_manifest(cfg, manifest_data, "train", identity)
+        require_fhit_cache_manifest(
+            manifest_data,
+            experiment,
+            prototype_dim=int(cfg["distillation"].get("prototype_embedding_dim", 512)),
+        )
+        provenance_checked = verify_cache_sample(
+            cfg, cache_dir, manifest_data, samples=64
+        )
+        if identity.get("strict"):
+            print(
+                f"V3 cache provenance verified: namespace={artifact_namespace(identity)} "
+                f"samples={provenance_checked}"
+            )
         cfg["runtime"]["cache_manifest"] = manifest_data
+        if experiment in {"p", "gp"}:
+            bank_value = cfg["distillation"].get("prototype_bank")
+            if not bank_value:
+                raise RuntimeError(
+                    "P/GP requires --prototype-bank, distillation.prototype_bank, or the "
+                    "fingerprint-namespaced default bank. "
+                    "Build it with: python -m src.prototype_bank build ..."
+                )
+            bank_path = Path(bank_value)
+            if not bank_path.is_absolute():
+                bank_path = root / bank_path
+            bank_path = bank_path.resolve()
+            if not bank_path.is_file():
+                raise FileNotFoundError(f"Prototype bank missing: {bank_path}")
+            bank = PrototypeBank.load(bank_path, cfg, manifest_data)
+            cfg["distillation"]["prototype_bank"] = str(bank_path)
+            cfg["runtime"]["prototype_bank"] = {
+                "bank_fingerprint": bank.value["bank_fingerprint"],
+                "sha256": file_sha256(bank_path),
+                "embedding_dim": bank.embedding_dim,
+                "min_count": bank.min_count,
+            }
         if resume_path is not None:
             if not hasattr(model.model, "distill_addons"):
                 raise RuntimeError(
                     f"{resume_path} has no distill_addons and came from the old silently-disabled KD path. "
-                    "It cannot be resumed; start a new F/K/FK run with a new --run-name."
+                    "It cannot be resumed; start a new KD run with a new --run-name."
                 )
             saved_experiment = getattr(model.model, "kd_experiment", None)
             if saved_experiment != experiment:
                 raise RuntimeError(f"Checkpoint experiment is {saved_experiment!r}, not requested {experiment!r}; cross-group resume is forbidden.")
             if getattr(model.model, "kd_cache_manifest", None) != manifest_data:
                 raise RuntimeError("Checkpoint teacher-cache manifest differs from the selected cache; exact KD resume is forbidden.")
+            if getattr(model.model, "kd_prototype_bank", None) != cfg["runtime"].get("prototype_bank"):
+                raise RuntimeError(
+                    "Checkpoint prototype-bank identity differs from the selected bank; exact KD resume is forbidden."
+                )
+            if identity.get("strict"):
+                saved_identity = getattr(model.model, "kd_dataset_identity", None)
+                if saved_identity != portable_dataset_identity(identity):
+                    raise RuntimeError(
+                        "Checkpoint dataset fingerprint differs from V3 config; cross-dataset resume is forbidden."
+                    )
+                if getattr(model.model, "kd_artifact_namespace", None) != artifact_namespace(identity):
+                    raise RuntimeError(
+                        "Checkpoint artifact namespace differs from V3 config; exact resume is forbidden."
+                    )
             expected_fingerprint = kd_objective_fingerprint(cfg)
             saved_fingerprint = getattr(model.model, "kd_objective_fingerprint", None)
             targeted_v4 = bool(
@@ -119,7 +214,7 @@ def main() -> None:
                     "because replay negatives are intentionally sparse."
                 )
     elif args.health_batches is not None:
-        raise ValueError("--health-batches is only meaningful for F/K/FK KD runs.")
+        raise ValueError("--health-batches is only meaningful for KD runs (F/K/FK/G/P/GP).")
     replay_control = experiment == "c0" and bool(cfg["distillation"].get("hard_image_replay_manifest"))
     if replay_control:
         # Fail before Ultralytics starts if the manifest is missing or unsafe.
@@ -127,6 +222,15 @@ def main() -> None:
         if not load_hard_replay_images(cfg):
             raise RuntimeError("C0 hard replay was requested but selected zero images.")
         ReplayDetectionTrainer.configure(cfg)
+    prepare_run_lineage(
+        cfg,
+        run_dir,
+        experiment=experiment,
+        initial_checkpoint=Path(cfg["paths"]["baseline_weights"]),
+        resume_checkpoint=resume_path,
+        cache_manifest_data=cfg["runtime"].get("cache_manifest"),
+        identity=identity,
+    )
     # The cache was made from deterministic 640 letterbox images. Every image-changing augmentation must be off
     # in *all* four continuation groups, including C0, or the KD comparisons are not fair/aligned.
     deterministic_kd_args = dict(

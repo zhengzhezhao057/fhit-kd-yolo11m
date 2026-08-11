@@ -1,0 +1,23 @@
+{
+  "format": 1,
+  "dataset_id": "scene811_v3_grouped_clean_r10",
+  "dataset_fingerprint": "b4367981f59e0d04cf7925587582acb0d3f25a2e9b145dfef662a8da8f0797b9",
+  "source_fingerprint": "b0e5696d7be23789f22edc73bb6ef6da28d3136fb25203416771738ac38460d2",
+  "split_fingerprint": "1dc21f3ec4b4ee04ecc83a8642fbc7e4eebade00646e7344210308e7e049b3e6",
+  "patch_fingerprint": "f2c4a289e6b16da0cbe502a7e2d3ef9bee8a3cd59d7376325f0be369d5f53a7d",
+  "near_duplicate_review_sha256": "48f7c934bc17240c121d266c0f4eabf093b61ea2a51acdcb87952360211c6a83",
+  "semantic_same_scene_review_sha256": "e53531ffdfc2a915813880222c8bebc35b921a74bbf6d70c5bfdbb88a1f0e426",
+  "semantic_same_scene_dino_audit_fingerprint": "f777a3eb779cd8eded142cbf27ff688224b31dd370729af4e07effb07760a882",
+  "source_zip_sha256": "f66212d1693baa92c6342ddac003775671a9c99e38fb6d26eee2cacd28d63bc5",
+  "official_manifest_sha256": "cc232ac07d9842109892d5c8c5b5af0e9f9b22e4a87c30ceffcf57b0733da1d1",
+  "official_identity_manifest": "reports/official_identity_manifest.csv",
+  "official_identity_manifest_sha256": "f65c8db49642c6fa345d480cb5d172a4dfc9ec78979bf2bffb872552db9cb2c0",
+  "official_identity_fingerprint": "8834c6b412add33fac098c920480a0605ba3f386e0bbdf5e8a8324f966e334b0",
+  "seed": 20260810,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "image_count": 8211
+}

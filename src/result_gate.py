@@ -55,7 +55,7 @@ def check_model(baseline: dict, candidate: dict, gates: dict | None = None) -> d
     elif not checks["weak_group_gain"]:
         action = "HOLD: do not long-train; revise failure routing or data curriculum with the same control."
     else:
-        action = "ADVANCE: repeat with seed=1; only then enter 40-100 epoch finalist training."
+        action = "ADVANCE: repeat with a preregistered independent seed; only then enter finalist training."
     return {"passed": passed, "checks": checks, "deltas": deltas, "failed": failed, "next_action": action}
 
 
@@ -72,7 +72,7 @@ def decide(payload: dict) -> dict:
     passed = [name for name, result in candidates.items() if result["passed"]]
     if passed:
         best = max(passed, key=lambda name: models[name]["native"]["map50_95"])
-        next_action = f"Advance {best} to seed=1 replication; keep {baseline_name} as the matched control."
+        next_action = f"Advance {best} to the next preregistered seed; keep {baseline_name} as the matched control."
     elif candidates:
         next_action = "No candidate passed. Keep C0, inspect failure modes, and do not start long KD training."
     else:

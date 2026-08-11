@@ -65,14 +65,24 @@ class DINOFeatureTeacher(nn.Module):
         return p3, p4, p5
 
     def classify_rois(self, p3: Tensor, rois_xyxy: Tensor) -> Tensor:
-        if rois_xyxy.numel() == 0:
+        embedding = self.embed_rois(p3, rois_xyxy)
+        if embedding.numel() == 0:
             return p3.new_zeros((0, self.roi_classifier[-1].out_features))
+        return self.roi_classifier[-1](self.roi_classifier[-2](embedding))
+
+    def embed_rois(self, p3: Tensor, rois_xyxy: Tensor) -> Tensor:
+        """Return the 512-D penultimate teacher representation for each GT RoI."""
+        if rois_xyxy.numel() == 0:
+            return p3.new_zeros((0, self.roi_classifier[1].out_features))
         aligned = roi_align(p3, rois_xyxy, output_size=self.roi_size, spatial_scale=1.0 / 8.0, sampling_ratio=2, aligned=True)
-        return self.roi_classifier(aligned)
+        flattened = self.roi_classifier[0](aligned)
+        return self.roi_classifier[2](self.roi_classifier[1](flattened))
 
     def forward(self, x: Tensor, rois_xyxy: Tensor | None = None) -> dict[str, Tensor | tuple[Tensor, Tensor, Tensor]]:
         p3, p4, p5 = self.pyramid(x)
         result: dict[str, Tensor | tuple[Tensor, Tensor, Tensor]] = {"features": (p3, p4, p5)}
         if rois_xyxy is not None:
-            result["roi_logits"] = self.classify_rois(p3, rois_xyxy)
+            embeddings = self.embed_rois(p3, rois_xyxy)
+            result["roi_embeddings"] = embeddings
+            result["roi_logits"] = self.roi_classifier[-1](self.roi_classifier[-2](embeddings))
         return result

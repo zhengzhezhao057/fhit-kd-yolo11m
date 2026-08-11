@@ -20,9 +20,10 @@ from .distillation import (
     VehicleNegativeStore,
     _train_relative_image,
 )
+from .prototype_bank import PrototypeBank
 
 
-KD_CALIBRATION_BRANCHES = ("feature", "cls", "vehicle_bg")
+KD_CALIBRATION_BRANCHES = ("feature", "cls", "global", "prototype", "vehicle_bg")
 
 
 def sync_kd_calibration_buffers(source: torch.nn.Module, destination: torch.nn.Module) -> int:
@@ -111,13 +112,30 @@ def restore_legacy_kd_calibration(
 
 def kd_objective_fingerprint(cfg: dict[str, Any]) -> str:
     """Fingerprint every setting that changes a KD continuation trajectory."""
+    dataset_payload = {
+        key: cfg["dataset"].get(key)
+        for key in ("nc", "image_size", "class_groups")
+    }
+    if bool(cfg.get("runtime", {}).get("dataset_identity", {}).get("strict")):
+        dataset_payload.update(
+            {
+                "id": cfg["dataset"].get("id"),
+                "dataset_fingerprint": cfg["dataset"].get("dataset_fingerprint"),
+                "split_fingerprint": cfg["dataset"].get("split_fingerprint"),
+            }
+        )
     payload = {
         "experiment": cfg["runtime"]["experiment"],
-        "dataset": {key: cfg["dataset"].get(key) for key in ("nc", "image_size", "class_groups")},
+        "dataset": dataset_payload,
         "student": cfg["student"],
         "distillation": copy.deepcopy(cfg["distillation"]),
     }
-    for manifest_key in ("hard_example_manifest", "vehicle_negative_manifest", "hard_image_replay_manifest"):
+    for manifest_key in (
+        "hard_example_manifest",
+        "vehicle_negative_manifest",
+        "hard_image_replay_manifest",
+        "prototype_bank",
+    ):
         manifest = payload["distillation"].get(manifest_key)
         if not manifest:
             continue
@@ -303,6 +321,7 @@ class DistillationDetectionTrainer(DetectionTrainer):
     def get_model(self, cfg: str | dict | None = None, weights=None, verbose: bool = True):
         model = DetectionModel(cfg, nc=self.data["nc"], ch=self.data["channels"], verbose=verbose and RANK == -1)
         channels = infer_student_channels(model, int(self.kd_cfg["dataset"]["image_size"]))
+        experiment = self.kd_cfg["runtime"]["experiment"]
         model.add_module(
             "distill_addons",
             StudentDistillAddons(
@@ -310,6 +329,9 @@ class DistillationDetectionTrainer(DetectionTrainer):
                 int(self.kd_cfg["teacher"]["feature_channels"]),
                 int(self.kd_cfg["dataset"]["nc"]),
                 enable_vehicle_bg=bool(self.kd_cfg["distillation"].get("vehicle_bg_enabled", False)),
+                enable_global=experiment in {"g", "gp"},
+                enable_prototype=experiment in {"p", "gp"},
+                prototype_dim=int(self.kd_cfg["distillation"].get("prototype_embedding_dim", 512)),
             ),
         )
         if weights:
@@ -358,13 +380,44 @@ class DistillationDetectionTrainer(DetectionTrainer):
             raise RuntimeError("KD lifecycle failure: distill_addons are absent from the real trainer.model.")
         model.kd_experiment = self.kd_cfg["runtime"]["experiment"]
         model.kd_cache_manifest = copy.deepcopy(self.kd_cfg["runtime"]["cache_manifest"])
+        from .provenance import portable_dataset_identity
+
+        model.kd_dataset_identity = portable_dataset_identity(
+            self.kd_cfg["runtime"]["dataset_identity"]
+        )
+        model.kd_artifact_namespace = self.kd_cfg["runtime"].get(
+            "artifact_namespace"
+        )
+        model.kd_prototype_bank = copy.deepcopy(
+            self.kd_cfg["runtime"].get("prototype_bank")
+        )
         model.kd_objective_fingerprint = kd_objective_fingerprint(self.kd_cfg)
         original_criterion = model.init_criterion()
+        experiment = self.kd_cfg["runtime"]["experiment"]
+        prototype_bank = None
+        required_fields: set[str] = set()
+        if experiment in {"p", "gp"}:
+            bank_path = self.kd_cfg["distillation"].get("prototype_bank")
+            if not bank_path:
+                raise RuntimeError("P/GP requires distillation.prototype_bank.")
+            prototype_bank = PrototypeBank.load(
+                bank_path,
+                self.kd_cfg,
+                self.kd_cfg["runtime"]["cache_manifest"],
+            )
+            required_fields.add("roi_embeddings")
         self.kd_loss = DistillationLoss(
             original_criterion,
             addons,
-            TeacherSignalStore(self.teacher_cache_dir),
+            TeacherSignalStore(
+                self.teacher_cache_dir,
+                manifest_fingerprint=self.kd_cfg["runtime"]["cache_manifest"].get(
+                    "compatibility_fingerprint"
+                ),
+                required_fields=required_fields,
+            ),
             self.kd_cfg,
+            prototype_bank=prototype_bank,
         )
         model.criterion = self.kd_loss
 
@@ -387,6 +440,31 @@ class DistillationDetectionTrainer(DetectionTrainer):
         if experiment in {"k", "fk"}:
             parameter = next(parameter for parameter in addons.student_roi_head.parameters() if parameter.requires_grad)
             self._kd_gradient_handles.append(parameter.register_hook(lambda grad: self.kd_loss.record_gradient("roi_head", grad)))
+        if experiment in {"g", "gp"}:
+            # Hook P4 explicitly: G never relies on the interpolated teacher P3.
+            parameter = next(
+                parameter
+                for parameter in addons.projectors[1].parameters()
+                if parameter.requires_grad
+            )
+            self._kd_gradient_handles.append(
+                parameter.register_hook(
+                    lambda grad: self.kd_loss.record_gradient("global_projector", grad)
+                )
+            )
+        if experiment in {"p", "gp"}:
+            if addons.prototype_fuse is None:
+                raise RuntimeError("KD lifecycle failure: prototype_fuse is missing.")
+            parameter = next(
+                parameter
+                for parameter in addons.prototype_fuse.parameters()
+                if parameter.requires_grad
+            )
+            self._kd_gradient_handles.append(
+                parameter.register_hook(
+                    lambda grad: self.kd_loss.record_gradient("prototype_head", grad)
+                )
+            )
         if bool(self.kd_cfg["distillation"].get("vehicle_bg_enabled", False)):
             if addons.vehicle_bg_head is None:
                 raise RuntimeError("KD lifecycle failure: vehicle_bg_head is missing.")
@@ -433,14 +511,20 @@ class DistillationDetectionTrainer(DetectionTrainer):
         LOGGER.info(
             "KD HEALTH: "
             f"epoch={summary['epoch']} feature={summary['feature_raw_mean']:.6g} "
-            f"cls={summary['cls_raw_mean']:.6g} kd={summary['kd_mean']:.6g} "
+            f"cls={summary['cls_raw_mean']:.6g} "
+            f"global={summary['global_raw_mean']:.6g} "
+            f"prototype={summary['prototype_raw_mean']:.6g} kd={summary['kd_mean']:.6g} "
             f"vehicle_bg={summary['vehicle_bg_raw_mean']:.6g} "
-            f"rois={summary['valid_rois']} cache_misses={summary['cache_misses']} "
+            f"rois={summary['valid_rois']} prototype_rois={summary['prototype_valid_rois']} "
+            f"routes=G{summary['global_routed_objects']}/P{summary['prototype_routed_objects']} "
+            f"cache_misses={summary['cache_misses']} "
             f"teacher_keep={summary['teacher_kept']}/{summary['teacher_candidates']} "
             f"weights=({summary['feature_kd_weight']:.4g},{summary['cls_kd_weight']:.4g}) "
             f"conflict(det/F)={summary['det_feature_grad_negative_rate']:.3f} "
             f"conflict(det/K)={summary['det_cls_grad_negative_rate']:.3f} "
             f"feature_grad_events={summary['feature_grad_events']} roi_grad_events={summary['roi_grad_events']}"
+            f" global_grad_events={summary['global_grad_events']}"
+            f" prototype_grad_events={summary['prototype_grad_events']}"
             f" vehicle_bg_grad_events={summary['vehicle_bg_grad_events']}"
         )
 

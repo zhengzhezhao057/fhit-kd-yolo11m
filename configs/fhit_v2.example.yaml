@@ -1,0 +1,120 @@
+# Portable FHiT-KD v2 template. Paths are relative to project_root unless the
+# underlying loader requires the dataset YAML itself. Copy to fhit_v2.yaml,
+# place the V3 dataset beside the repository, then adjust only these paths.
+paths:
+  project_root: .
+  data_yaml: ../dataset_scene811_v3/dataset.yaml
+  baseline_weights: artifacts/weights/yolo11m_baseline_best.pt
+  dino_weights: artifacts/weights/dinov3_vitl16_pretrain_sat493m-eadcf0ff.pth
+  dino_repo: external/dinov3
+
+dataset:
+  # The colocated dataset_fingerprint.json supplies and verifies both SHA-256
+  # fingerprints. Do not hand-edit them in a server-specific config.
+  id: scene811_v3_grouped_clean_r10
+  nc: 25
+  image_size: 640
+  class_groups:
+    ship: [0, 1, 2, 3]
+    aircraft: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    vehicle: [24]
+
+teacher:
+  batch: 2
+  accumulate: 4
+  epochs: 30
+  lr: 0.001
+  num_workers: 4
+  feature_channels: 256
+  roi_size: 7
+
+student:
+  epochs: 40
+  batch: 8
+  workers: 4
+  optimizer: AdamW
+  lr0: 0.0003
+  lrf: 0.01
+  weight_decay: 0.0005
+  warmup_epochs: 2
+  warmup_bias_lr: 0.0
+  seed: 0
+  kd_warmup_epochs: 2
+  save_period: 1
+
+distillation:
+  # Legacy F/K/FK remains available. G/P/GP below are independent v2 branches.
+  temperature: 3.0
+  feature_budget_ratio: 0.005
+  cls_budget_ratio: 0.005
+  feature_scale_weights: [0.6, 0.3, 0.1]
+  foreground_weight: 1.0
+  boundary_weight: 0.3
+  background_weight: 0.05
+  teacher_confidence_floor: 0.70
+  roi_match_iou_floor: 0.999
+  health_patience_batches: 10
+
+  weighting_mode: gradient_calibrated
+  calibration_batches: 128
+  gradient_probe_batches: 128
+  gradient_conflict_threshold: 0.05
+  object_weight_bounds: [0.25, 4.0]
+
+  # G: DINO-native semantic scales only. p3 is deliberately forbidden here,
+  # because the teacher's p3 is merely an interpolation of p4.
+  global_feature_levels: [p4, p5]
+  global_scale_weights: [0.65, 0.35]
+  global_numerical_scale: 1.0
+  global_gradient_ratio: 0.02
+  global_weight_bounds: [0.000001, 100.0]
+  global_schedule: {start_epoch: 0, warmup_epochs: 2, hold_epochs: 8, decay_epochs: 10}
+
+  # P: DINO teacher penultimate RoI embeddings and leave-one-scene-out banks.
+  prototype_bank: artifacts/prototypes/scene811_v3_fhit_v2.pt
+  prototype_embedding_dim: 512
+  prototype_min_count: 4
+  prototype_teacher_confidence_floor: 0.70
+  prototype_teacher_margin_floor: 0.10
+  prototype_require_coarse_correct: true
+  prototype_teacher_cosine_weight: 0.25
+  prototype_target_cosine_weight: 0.50
+  prototype_relational_weight: 0.25
+  prototype_relation_temperature: 0.20
+  prototype_gradient_ratio: 0.01
+  prototype_weight_bounds: [0.000001, 100.0]
+  prototype_schedule: {start_epoch: 0, warmup_epochs: 2, hold_epochs: 8, decay_epochs: 10}
+
+  # GP routes each GT target once. Ship/vehicle/small/hard targets use P; the
+  # complement uses G, so losses are not blindly stacked on every object.
+  gp_prototype_groups: [ship, vehicle]
+  gp_prototype_sizes: [small]
+  gp_prototype_failures: [low_confidence, no_candidate, nms_suppressed, wrong_group]
+  prototype_error_weights:
+    detected: 0.5
+    localization: 0.8
+    low_confidence: 1.5
+    no_candidate: 1.8
+    nms_suppressed: 1.5
+    wrong_group: 1.8
+  prototype_small_multiplier: 1.5
+
+  # L is intentionally not implemented. It may be enabled only after an
+  # external geometric teacher demonstrates a positive high-IoU validation gate.
+  localization_teacher:
+    enabled: false
+    status: gated_not_implemented
+    prerequisite: geometric_teacher_must_improve_high_iou_localization_on_frozen_val
+
+evaluation:
+  confidence_grid: [0.01, 0.03, 0.05, 0.08, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90]
+  nms_iou: 0.5
+  class_aware_matching: true
+
+large_image:
+  tile_size: 800
+  tile_stride: 480
+  infer_batch: 16
+  tile_nms_iou: 0.5
+  global_nms_iou: 0.65
+  merge_mode: coarse

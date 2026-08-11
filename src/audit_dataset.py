@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 import yaml
 
-from .common import COARSE_NAMES, FINE_TO_COARSE, json_dump, read_yolo_labels, xywhn_to_xyxy
+from .common import COARSE_NAMES, FINE_TO_COARSE, json_dump, xywhn_to_xyxy
 from .artifact_paths import dataset_root, manifests_dir
 from .dataset_d0 import file_sha256, image_files
 from .dataset_registry import fingerprint_scene811, load_manifest, manifest_split_fingerprint, class_mapping_fingerprint
@@ -83,19 +83,27 @@ def audit_scene811(
                 continue
             height, width = image.shape[:2]
             lines = label_path.read_text(encoding="utf-8").splitlines() if label_path.exists() else []
-            raw_classes, raw_boxes = read_yolo_labels(label_path, deduplicate=False)
-            classes, boxes = read_yolo_labels(label_path, deduplicate=True)
-            dup_rows += len(raw_classes) - len(classes)
+            valid_fields = [line.split() for line in lines if valid_label_line(line.split())]
+            if valid_fields:
+                valid_array = np.asarray(
+                    [[float(value) for value in fields[:5]] for fields in valid_fields],
+                    dtype=np.float32,
+                )
+                _, first_indices = np.unique(valid_array, axis=0, return_index=True)
+                deduplicated = valid_array[np.sort(first_indices)]
+                classes = deduplicated[:, 0].astype(np.int64)
+                boxes = deduplicated[:, 1:5]
+                dup_rows += len(valid_array) - len(deduplicated)
+            else:
+                classes = np.zeros((0,), dtype=np.int64)
+                boxes = np.zeros((0, 4), dtype=np.float32)
             if dup_lines := label_duplicates(lines):
                 duplicate_files[relative] = {
                     "duplicate_count": len(dup_lines),
                     "removed_rows": sum(len(item["line_numbers"]) - 1 for item in dup_lines),
                     "examples": dup_lines[:5],
                 }
-            valid = np.asarray([valid_label_line(line.split()) for line in lines], dtype=bool) if lines else np.zeros(0, dtype=bool)
-            invalid_rows += int((~valid).sum())
-            if len(valid):
-                classes, boxes = classes[valid], boxes[valid]
+            invalid_rows += len(lines) - len(valid_fields)
             if not len(classes):
                 backgrounds += 1
                 if not lines:

@@ -1,0 +1,28 @@
+{
+  "format": 1,
+  "kind": "scene811_v3_near_duplicate_review",
+  "source_zip_sha256": "f66212d1693baa92c6342ddac003775671a9c99e38fb6d26eee2cacd28d63bc5",
+  "review_date": "2026-08-11",
+  "method": "original-resolution visual comparison plus source-product and geolocation verification",
+  "pairs": [
+    {
+      "left_image_sha256": "da45c84ec76b4edd9cd2459e33bda074fd1a1b8fffc0379300d76f4fbe8df434",
+      "right_image_sha256": "a31a1ef42440e89821867527fa578eb61c1fbbaba57486cbbfba27cbf142e8ed",
+      "dhash_distance": 2,
+      "phash_distance": 4,
+      "decision": "different_scene_false_positive",
+      "reviewer": "manual_visual",
+      "reviewed_at_utc": "2026-08-10T16:03:22Z",
+      "rationale": "Different acquisition metadata and visibly different vessel structures; the dark sea background caused the hash collision."
+    },
+    {
+      "left_image_sha256": "7ecda68cf461e1e428b20344ddaaefa9ed16e822f476c99f15a3239d3a4134e3",
+      "right_image_sha256": "21443b9270711ba271023a8d59e68e95ae63fc7a94d2d97d8b755bdfbe6b34a5",
+      "dhash_distance": 1,
+      "decision": "different_scene_false_positive",
+      "reviewer": "manual_visual",
+      "reviewed_at_utc": "2026-08-11T12:00:00Z",
+      "rationale": "P9794 is a grayscale naval carrier at a harbor; MAR20_1793 is a color airport apron with four aircraft. The nearly uniform bright/dark layout caused the hash collision, but the scenes and target groups are visibly different."
+    }
+  ]
+}

@@ -26,6 +26,27 @@ def health_ok(path: Path) -> bool:
         branch_ok &= int(record.get("feature_nonzero_batches", 0)) > 0 and int(record.get("feature_grad_events", 0)) > 0
     if experiment in {"k", "fk"}:
         branch_ok &= int(record.get("cls_nonzero_batches", 0)) > 0 and int(record.get("roi_grad_events", 0)) > 0
+    if experiment in {"g", "gp"}:
+        branch_ok &= (
+            int(record.get("global_nonzero_batches", 0)) > 0
+            and int(record.get("global_grad_events", 0)) > 0
+            and float(record.get("global_grad_norm_sum", 0.0)) > 0.0
+        )
+    if experiment in {"p", "gp"}:
+        branch_ok &= (
+            int(record.get("prototype_nonzero_batches", 0)) > 0
+            and int(record.get("prototype_valid_rois", 0)) > 0
+            and int(record.get("prototype_grad_events", 0)) > 0
+            and float(record.get("prototype_grad_norm_sum", 0.0)) > 0.0
+        )
+    if experiment == "gp":
+        # GP is an exclusive target router. A healthy run must exercise both
+        # routes and must never assign one object to both objectives.
+        branch_ok &= (
+            int(record.get("global_routed_objects", 0)) > 0
+            and int(record.get("prototype_routed_objects", 0)) > 0
+            and int(record.get("route_overlap_objects", -1)) == 0
+        )
     return bool(record.get("optimizer_verified")) and int(record.get("cache_misses", 1)) == 0 and branch_ok
 
 

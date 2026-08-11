@@ -1,0 +1,120 @@
+# Portable V3 short-screen template. All machine paths and immutable dataset
+# fingerprints are injected by ``python -m src.prepare_scene811_v3_configs``.
+paths:
+  data_yaml: /absolute/path/generated/by/the/config/generator.yaml
+  baseline_weights: /absolute/path/to/fixed_b_mix_best.pt
+  dino_weights: /absolute/path/to/dinov3_sat493m.pth
+  dino_repo: /absolute/path/to/external/dinov3
+  project_root: /absolute/path/to/this/repository
+
+dataset:
+  id: scene811_v3_grouped_clean_r10
+  nc: 25
+  image_size: 640
+  class_groups:
+    ship: [0, 1, 2, 3]
+    aircraft: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    vehicle: [24]
+
+teacher:
+  batch: 2
+  accumulate: 4
+  epochs: 30
+  lr: 0.001
+  num_workers: 4
+  feature_channels: 256
+  roi_size: 7
+
+student:
+  epochs: 8
+  batch: 8
+  workers: 4
+  optimizer: AdamW
+  lr0: 0.00003
+  lrf: 0.1
+  weight_decay: 0.0005
+  warmup_epochs: 0.0
+  warmup_bias_lr: 0.00003
+  seed: 42
+  kd_warmup_epochs: 1
+  save_period: -1
+
+distillation:
+  temperature: 6.0
+  weighting_mode: gradient_calibrated
+  calibration_batches: 128
+  gradient_probe_batches: 128
+  gradient_conflict_threshold: 0.10
+  feature_gradient_ratio: 0.03
+  cls_gradient_ratio: 0.005
+  global_gradient_ratio: 0.03
+  prototype_gradient_ratio: 0.01
+  feature_numerical_scale: 1024.0
+  global_numerical_scale: 1.0
+  feature_weight_bounds: [0.001, 1000.0]
+  cls_weight_bounds: [0.000001, 1.0]
+  global_weight_bounds: [0.000001, 100.0]
+  prototype_weight_bounds: [0.000001, 100.0]
+  feature_budget_ratio: 0.15
+  cls_budget_ratio: 0.15
+  feature_scale_weights: [0.6, 0.3, 0.1]
+  foreground_weight: 1.0
+  boundary_weight: 0.3
+  background_weight: 0.05
+  teacher_confidence_floor: 0.70
+  teacher_entropy_ceiling: 0.65
+  require_teacher_correct: true
+  teacher_correctness: coarse
+  health_patience_batches: 10
+  roi_match_iou_floor: 0.5
+
+  # G: use DINO correlations on semantic P4/P5. P3 is intentionally excluded;
+  # resizing one transformer map does not create genuine high-resolution detail.
+  global_feature_levels: [p4, p5]
+  global_scale_weights: [0.6, 0.4]
+  global_schedule:
+    start_epoch: 0
+    warmup_epochs: 1
+    hold_epochs: 2
+    decay_epochs: 3
+
+  # P: path is generated inside the fingerprint namespace. The bank must be
+  # built from the matching format=3 teacher cache before P/GP can run.
+  prototype_bank: null
+  prototype_embedding_dim: 512
+  prototype_teacher_confidence_floor: 0.70
+  prototype_teacher_margin_floor: 0.10
+  prototype_require_coarse_correct: true
+  prototype_teacher_cosine_weight: 0.25
+  prototype_target_cosine_weight: 0.50
+  prototype_relational_weight: 0.25
+  prototype_relation_temperature: 0.20
+  prototype_schedule:
+    start_epoch: 0
+    warmup_epochs: 1
+    hold_epochs: 2
+    decay_epochs: 3
+
+  # GP assigns each object to exactly one branch by group/size/OOF failure;
+  # these are routing defaults, not claims of a proven winning setting.
+  gp_prototype_groups: [ship, vehicle]
+  gp_prototype_sizes: [small]
+  gp_prototype_failures: [low_confidence, no_candidate, nms_suppressed, wrong_group]
+  hard_example_manifest: null
+  hierarchical_kl:
+    enabled: false
+    coarse_weight: 0.6
+    within_group_weight: 0.4
+
+evaluation:
+  confidence_grid: [0.01, 0.03, 0.05, 0.08, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90]
+  nms_iou: 0.5
+  class_aware_matching: true
+
+large_image:
+  tile_size: 800
+  tile_stride: 480
+  infer_batch: 16
+  tile_nms_iou: 0.5
+  global_nms_iou: 0.65
+  merge_mode: coarse

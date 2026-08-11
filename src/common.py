@@ -21,16 +21,32 @@ def load_config(path: str | Path) -> dict[str, Any]:
 
 def resolve_data_yaml(config: dict[str, Any]) -> dict[str, Any]:
     import yaml
-    p = Path(config["paths"]["data_yaml"])
+    p = Path(config["paths"]["data_yaml"]).resolve()
     with p.open("r", encoding="utf-8") as stream:
         data = yaml.safe_load(stream)
-    root = Path(data["path"])
-    data["path"] = str(root)
+    configured_root = data.get("path")
+    root = Path(str(configured_root)) if configured_root not in {None, ""} else p.parent
+    if not root.is_absolute():
+        root = p.parent / root
+    data["path"] = str(root.resolve())
     return data
 
 
 def split_image_dir(data: dict[str, Any], split: str) -> Path:
-    return Path(data["path"]) / data[split]
+    value = data[split]
+    if not isinstance(value, str):
+        raise RuntimeError(
+            f"Teacher/KD requires dataset.{split} to be an image directory, got {type(value).__name__}."
+        )
+    candidate = Path(value)
+    if not candidate.is_absolute():
+        candidate = Path(data["path"]) / candidate
+    if candidate.suffix.lower() == ".txt" or candidate.is_file():
+        raise RuntimeError(
+            f"Teacher/KD cannot use list-based dataset split {split}={candidate}. "
+            "Use the mixed directory dataset.yaml; dataset_official.yaml is evaluation/baseline-only."
+        )
+    return candidate
 
 
 def image_to_label_path(image_path: Path, image_dir: Path, label_dir: Path) -> Path:

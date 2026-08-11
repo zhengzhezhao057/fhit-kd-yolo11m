@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "kind": "scene811_v3_d0_audit",
+  "dataset_id": "scene811_v3_grouped_clean_r10",
+  "dataset_fingerprint": "b4367981f59e0d04cf7925587582acb0d3f25a2e9b145dfef662a8da8f0797b9",
+  "training_ready": true,
+  "checks": {
+    "official_images_equal_expected": true,
+    "added_images_in_val_test_zero": true,
+    "missing_image_label_pairs_zero": true,
+    "invalid_yolo_rows_zero": true,
+    "official_scene_cross_split_zero": true,
+    "cluster_cross_split_zero": true,
+    "exact_cross_split_duplicates_zero": true,
+    "strong_near_duplicate_leaks_zero": true,
+    "unreviewed_empty_added_labels_zero": true,
+    "known_unlabeled_ship_excluded": true,
+    "official_identity_manifest_count_correct": true,
+    "portable_yaml_has_no_absolute_path": true,
+    "portable_train_lists_complete": true,
+    "semantic_same_scene_unions_applied": true,
+    "semantic_same_scene_unions_single_cluster": true
+  },
+  "active_images": 8212,
+  "selected_images": 8211,
+  "excluded_active_images": 1,
+  "official_images": 4481,
+  "added_images": 3730,
+  "split_images": {
+    "val": 674,
+    "train": 6870,
+    "test": 667
+  },
+  "source_by_split": {
+    "train": {
+      "official": 3140,
+      "added": 3730
+    },
+    "val": {
+      "official": 674
+    },
+    "test": {
+      "official": 667
+    }
+  },
+  "quarantine_ignored": {
+    "images": 903,
+    "labels": 903
+  },
+  "label_patch_rows": 1,
+  "official_identity_manifest_rows": 4481,
+  "official_identity_manifest_sha256": "f65c8db49642c6fa345d480cb5d172a4dfc9ec78979bf2bffb872552db9cb2c0",
+  "scene_leaks": {},
+  "cluster_leaks": {},
+  "exact_cross_split_duplicates": 0,
+  "strong_near_duplicate_candidates": 1,
+  "strong_near_duplicate_reviewed_distinct": 1,
+  "strong_near_duplicate_unresolved": 0,
+  "semantic_same_scene_review_sha256": "e53531ffdfc2a915813880222c8bebc35b921a74bbf6d70c5bfdbb88a1f0e426",
+  "semantic_same_scene_dino_audit_fingerprint": "f777a3eb779cd8eded142cbf27ff688224b31dd370729af4e07effb07760a882",
+  "semantic_same_scene_unions": 192,
+  "distribution_soft_targets": {
+    "small_gap_preferred_max": 0.015,
+    "small_gap_explain_above": 0.03,
+    "crowded_edge_gap_preferred_max": 0.05,
+    "crowded_edge_gap_explain_above": 0.08,
+    "observed_official_fraction_gaps": {
+      "small": 0.0009960488302978576,
+      "crowded": 0.017390667524411207,
+      "edge": 0.0030186121478278927
+    }
+  }
+}

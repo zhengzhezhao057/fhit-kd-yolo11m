@@ -1,0 +1,359 @@
+{
+  "format": 1,
+  "official_only": {
+    "train": {
+      "images": 3140,
+      "instances": 14885,
+      "sources": {
+        "official": 3140
+      },
+      "source_families": {
+        "official_coordinate_l1a": 259,
+        "official_fsc_location": 50,
+        "official_mar20": 2181,
+        "official_other": 8,
+        "official_pan_l_product": 642
+      },
+      "fine_classes": {
+        "0": 12,
+        "1": 20,
+        "2": 491,
+        "3": 1564,
+        "4": 921,
+        "5": 911,
+        "6": 699,
+        "7": 351,
+        "8": 712,
+        "9": 257,
+        "10": 384,
+        "11": 524,
+        "12": 635,
+        "13": 533,
+        "14": 301,
+        "15": 409,
+        "16": 892,
+        "17": 1002,
+        "18": 344,
+        "19": 1505,
+        "20": 778,
+        "21": 184,
+        "22": 652,
+        "23": 528,
+        "24": 276
+      },
+      "coarse_groups": {
+        "ship": 2087,
+        "aircraft": 12522,
+        "vehicle": 276
+      },
+      "sizes": {
+        "small": 364,
+        "medium": 10778,
+        "large": 3743
+      },
+      "small_fraction": 0.02445414847161572,
+      "crowded_instances": 12869,
+      "crowded_fraction": 0.8645616392341283,
+      "edge_instances": 1917,
+      "edge_fraction": 0.12878736983540476,
+      "background_images": 3
+    },
+    "val": {
+      "images": 674,
+      "instances": 3252,
+      "sources": {
+        "official": 674
+      },
+      "source_families": {
+        "official_coordinate_l1a": 30,
+        "official_fsc_location": 7,
+        "official_mar20": 440,
+        "official_other": 2,
+        "official_pan_l_product": 195
+      },
+      "fine_classes": {
+        "0": 4,
+        "1": 4,
+        "2": 68,
+        "3": 406,
+        "4": 198,
+        "5": 197,
+        "6": 150,
+        "7": 75,
+        "8": 153,
+        "9": 54,
+        "10": 83,
+        "11": 113,
+        "12": 136,
+        "13": 114,
+        "14": 65,
+        "15": 87,
+        "16": 192,
+        "17": 217,
+        "18": 75,
+        "19": 323,
+        "20": 168,
+        "21": 39,
+        "22": 141,
+        "23": 113,
+        "24": 77
+      },
+      "coarse_groups": {
+        "ship": 482,
+        "aircraft": 2693,
+        "vehicle": 77
+      },
+      "sizes": {
+        "small": 79,
+        "medium": 2362,
+        "large": 811
+      },
+      "small_fraction": 0.024292742927429275,
+      "crowded_instances": 2755,
+      "crowded_fraction": 0.8471709717097171,
+      "edge_instances": 409,
+      "edge_fraction": 0.12576875768757687,
+      "background_images": 0
+    },
+    "test": {
+      "images": 667,
+      "instances": 3203,
+      "sources": {
+        "official": 667
+      },
+      "source_families": {
+        "official_coordinate_l1a": 29,
+        "official_fsc_location": 10,
+        "official_mar20": 452,
+        "official_other": 2,
+        "official_pan_l_product": 174
+      },
+      "fine_classes": {
+        "0": 1,
+        "1": 6,
+        "2": 98,
+        "3": 334,
+        "4": 199,
+        "5": 199,
+        "6": 150,
+        "7": 75,
+        "8": 154,
+        "9": 55,
+        "10": 83,
+        "11": 113,
+        "12": 137,
+        "13": 115,
+        "14": 65,
+        "15": 88,
+        "16": 193,
+        "17": 217,
+        "18": 75,
+        "19": 324,
+        "20": 169,
+        "21": 39,
+        "22": 141,
+        "23": 113,
+        "24": 60
+      },
+      "coarse_groups": {
+        "ship": 439,
+        "aircraft": 2704,
+        "vehicle": 60
+      },
+      "sizes": {
+        "small": 81,
+        "medium": 2320,
+        "large": 802
+      },
+      "small_fraction": 0.025288791757727132,
+      "crowded_instances": 2751,
+      "crowded_fraction": 0.8588822978457696,
+      "edge_instances": 409,
+      "edge_fraction": 0.12769278801123946,
+      "background_images": 1
+    }
+  },
+  "full_training_view": {
+    "train": {
+      "images": 6870,
+      "instances": 23188,
+      "sources": {
+        "added": 3730,
+        "official": 3140
+      },
+      "source_families": {
+        "added_au_ru_launcher": 604,
+        "added_numeric_ship": 1822,
+        "added_other": 126,
+        "added_p_ship": 1178,
+        "official_coordinate_l1a": 259,
+        "official_fsc_location": 50,
+        "official_mar20": 2181,
+        "official_other": 8,
+        "official_pan_l_product": 642
+      },
+      "fine_classes": {
+        "0": 925,
+        "1": 907,
+        "2": 2424,
+        "3": 1564,
+        "4": 921,
+        "5": 911,
+        "6": 699,
+        "7": 351,
+        "8": 712,
+        "9": 257,
+        "10": 384,
+        "11": 524,
+        "12": 635,
+        "13": 533,
+        "14": 301,
+        "15": 409,
+        "16": 892,
+        "17": 1002,
+        "18": 344,
+        "19": 1505,
+        "20": 778,
+        "21": 184,
+        "22": 652,
+        "23": 528,
+        "24": 4846
+      },
+      "coarse_groups": {
+        "ship": 5820,
+        "aircraft": 12522,
+        "vehicle": 4846
+      },
+      "sizes": {
+        "small": 448,
+        "medium": 14772,
+        "large": 7968
+      },
+      "small_fraction": 0.019320338105916855,
+      "crowded_instances": 18645,
+      "crowded_fraction": 0.8040796963946869,
+      "edge_instances": 4437,
+      "edge_fraction": 0.19134897360703812,
+      "background_images": 3
+    },
+    "val": {
+      "images": 674,
+      "instances": 3252,
+      "sources": {
+        "official": 674
+      },
+      "source_families": {
+        "official_coordinate_l1a": 30,
+        "official_fsc_location": 7,
+        "official_mar20": 440,
+        "official_other": 2,
+        "official_pan_l_product": 195
+      },
+      "fine_classes": {
+        "0": 4,
+        "1": 4,
+        "2": 68,
+        "3": 406,
+        "4": 198,
+        "5": 197,
+        "6": 150,
+        "7": 75,
+        "8": 153,
+        "9": 54,
+        "10": 83,
+        "11": 113,
+        "12": 136,
+        "13": 114,
+        "14": 65,
+        "15": 87,
+        "16": 192,
+        "17": 217,
+        "18": 75,
+        "19": 323,
+        "20": 168,
+        "21": 39,
+        "22": 141,
+        "23": 113,
+        "24": 77
+      },
+      "coarse_groups": {
+        "ship": 482,
+        "aircraft": 2693,
+        "vehicle": 77
+      },
+      "sizes": {
+        "small": 79,
+        "medium": 2362,
+        "large": 811
+      },
+      "small_fraction": 0.024292742927429275,
+      "crowded_instances": 2755,
+      "crowded_fraction": 0.8471709717097171,
+      "edge_instances": 409,
+      "edge_fraction": 0.12576875768757687,
+      "background_images": 0
+    },
+    "test": {
+      "images": 667,
+      "instances": 3203,
+      "sources": {
+        "official": 667
+      },
+      "source_families": {
+        "official_coordinate_l1a": 29,
+        "official_fsc_location": 10,
+        "official_mar20": 452,
+        "official_other": 2,
+        "official_pan_l_product": 174
+      },
+      "fine_classes": {
+        "0": 1,
+        "1": 6,
+        "2": 98,
+        "3": 334,
+        "4": 199,
+        "5": 199,
+        "6": 150,
+        "7": 75,
+        "8": 154,
+        "9": 55,
+        "10": 83,
+        "11": 113,
+        "12": 137,
+        "13": 115,
+        "14": 65,
+        "15": 88,
+        "16": 193,
+        "17": 217,
+        "18": 75,
+        "19": 324,
+        "20": 169,
+        "21": 39,
+        "22": 141,
+        "23": 113,
+        "24": 60
+      },
+      "coarse_groups": {
+        "ship": 439,
+        "aircraft": 2704,
+        "vehicle": 60
+      },
+      "sizes": {
+        "small": 81,
+        "medium": 2320,
+        "large": 802
+      },
+      "small_fraction": 0.025288791757727132,
+      "crowded_instances": 2751,
+      "crowded_fraction": 0.8588822978457696,
+      "edge_instances": 409,
+      "edge_fraction": 0.12769278801123946,
+      "background_images": 1
+    }
+  },
+  "official_fraction_gaps": {
+    "small": 0.0009960488302978576,
+    "crowded": 0.017390667524411207,
+    "edge": 0.0030186121478278927
+  }
+}

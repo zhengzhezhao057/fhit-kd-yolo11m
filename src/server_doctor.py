@@ -18,6 +18,7 @@ REQUIRED_PACKAGES = {
     "torchvision": "0.19.0",
     "ultralytics": "8.4.90",
     "opencv-python": "4.10.0",
+    "Pillow": "10.0.0",
     "PyYAML": "6.0.2",
     "tqdm": "4.66.0",
     "pytest": "8.0.0",
@@ -67,7 +68,7 @@ def version_at_least(actual: str, minimum: str) -> bool:
 def package_checks() -> list[Check]:
     checks: list[Check] = []
     for package, minimum in REQUIRED_PACKAGES.items():
-        module = {"opencv-python": "cv2", "PyYAML": "yaml"}.get(package, package)
+        module = {"opencv-python": "cv2", "Pillow": "PIL", "PyYAML": "yaml"}.get(package, package)
         if importlib.util.find_spec(module) is None:
             checks.append(Check(package, False, f"missing (requires >= {minimum})"))
             continue

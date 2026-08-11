@@ -1,0 +1,3658 @@
+{
+  "format": 1,
+  "kind": "scene811_v3_semantic_same_scene_review",
+  "source_zip_sha256": "f66212d1693baa92c6342ddac003775671a9c99e38fb6d26eee2cacd28d63bc5",
+  "dino_audit_cache_fingerprint": "f777a3eb779cd8eded142cbf27ff688224b31dd370729af4e07effb07760a882",
+  "method": "DINO candidate retrieval followed by SIFT-RANSAC geometric verification; sampled highest-confidence pairs manually inspected",
+  "automatic_dataset_mutation": false,
+  "pairs": [
+    {
+      "left_image_sha256": "02f0c1d4978d12b45a2194f5666a3b9c28aec749a7eca8baefb94938ff9de7c2",
+      "right_image_sha256": "78b6270fdcfcc19a5ab9ba907d100cd9861176f25af1c1dfca9eddffb5847718",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=120, inlier_rate=0.517241, min_area_overlap=0.724898.",
+      "evidence": {
+        "cosine_similarity": 0.9556388258934021,
+        "homography_inliers": 120,
+        "inlier_rate": 0.5172413793103449,
+        "min_area_overlap": 0.7248977491776561,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "02f0c1d4978d12b45a2194f5666a3b9c28aec749a7eca8baefb94938ff9de7c2",
+      "right_image_sha256": "85cfc070a3b480a126201186b009a53dd950ab18939445a484b06e57337138df",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=88, inlier_rate=0.435644, min_area_overlap=0.561639.",
+      "evidence": {
+        "cosine_similarity": 0.9207271337509155,
+        "homography_inliers": 88,
+        "inlier_rate": 0.43564356435643564,
+        "min_area_overlap": 0.5616392210467732,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "0494b22b0c8fe3ed4e6eee70a5be47b3778e8add78413661f08d0ee2fd623972",
+      "right_image_sha256": "f6600cbda657028c39bb1ebedd6b878c3236907061a5061c1a147dc0151be158",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=448, inlier_rate=0.901408, min_area_overlap=0.991153.",
+      "evidence": {
+        "cosine_similarity": 0.9428156614303589,
+        "homography_inliers": 448,
+        "inlier_rate": 0.9014084507042254,
+        "min_area_overlap": 0.9911526996509874,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2fc2ff4bfd5dc269cbcad5312428ad5dd37255ed06df9cd89e9bbacff00c654e",
+      "right_image_sha256": "04b8c9fce968d40c28523f351935eb0b14b5181b0efc515cb8e7005e43b3cf91",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=337, inlier_rate=0.896277, min_area_overlap=0.955989.",
+      "evidence": {
+        "cosine_similarity": 0.9411659240722656,
+        "homography_inliers": 337,
+        "inlier_rate": 0.8962765957446809,
+        "min_area_overlap": 0.9559894823436823,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "04d07edb8a6877c76653a0bceb8a16abdd854d1a1ef95acec71eea1c1faba701",
+      "right_image_sha256": "c82850e3f031a2a5a5647970ff0f5c9af53c1bfa9299f631edb0acb6f9a9308a",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=71, inlier_rate=0.390110, min_area_overlap=0.668598.",
+      "evidence": {
+        "cosine_similarity": 0.9428313374519348,
+        "homography_inliers": 71,
+        "inlier_rate": 0.3901098901098901,
+        "min_area_overlap": 0.6685978006596104,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "ca0c95df26a2a255eefaab6cd7d0df5dda6edcc14554ff4f7b6d9f70a6b958bb",
+      "right_image_sha256": "04d07edb8a6877c76653a0bceb8a16abdd854d1a1ef95acec71eea1c1faba701",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=49, inlier_rate=0.644737, min_area_overlap=0.867418.",
+      "evidence": {
+        "cosine_similarity": 0.9682486653327942,
+        "homography_inliers": 49,
+        "inlier_rate": 0.6447368421052632,
+        "min_area_overlap": 0.8674177252397546,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "057d8aafbc47761538c8bd8ce747749965a72bfecfebb470e8d6abf3f8cf5810",
+      "right_image_sha256": "53578bd4e6b9d70916fcbce3af0035f97a4b0a3a2b92bb74d73106a0c4a15b57",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=289, inlier_rate=0.935275, min_area_overlap=0.543337.",
+      "evidence": {
+        "cosine_similarity": 0.9713085889816284,
+        "homography_inliers": 289,
+        "inlier_rate": 0.9352750809061489,
+        "min_area_overlap": 0.5433366838458396,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "06051694c9107324893d5d0623c94f418ef71132b9cb45b4433f76e0bb461e99",
+      "right_image_sha256": "0ef495d0fce5b25731fba1e5c833f1ee14ef7b208a64fffadcef664f47b4aad5",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=71, inlier_rate=0.663551, min_area_overlap=0.345116.",
+      "evidence": {
+        "cosine_similarity": 0.9314317107200623,
+        "homography_inliers": 71,
+        "inlier_rate": 0.6635514018691588,
+        "min_area_overlap": 0.3451158969256596,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "06051694c9107324893d5d0623c94f418ef71132b9cb45b4433f76e0bb461e99",
+      "right_image_sha256": "30461fc8de89e1a82411e35a193dba1c431b0d3e513fcd999c5b46f504339459",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=575, inlier_rate=0.933442, min_area_overlap=0.589619.",
+      "evidence": {
+        "cosine_similarity": 0.9692782163619995,
+        "homography_inliers": 575,
+        "inlier_rate": 0.9334415584415584,
+        "min_area_overlap": 0.5896193963978681,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2a97765eee6c7305ebb4da76214e8e08e1f46998027fef5054cca2ecf616b205",
+      "right_image_sha256": "0641b6f49b1059e236a3db459584a66ab151337fdc5751c87b210eee0dc0ced0",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=79, inlier_rate=0.526667, min_area_overlap=0.875348.",
+      "evidence": {
+        "cosine_similarity": 0.9421805739402771,
+        "homography_inliers": 79,
+        "inlier_rate": 0.5266666666666666,
+        "min_area_overlap": 0.8753481255884915,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "41f87b5c156f0522ebe7f4293413e41956bcf4ae9eee39f6238e6e963a0fcd4f",
+      "right_image_sha256": "0641b6f49b1059e236a3db459584a66ab151337fdc5751c87b210eee0dc0ced0",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=20, inlier_rate=0.689655, min_area_overlap=0.613616.",
+      "evidence": {
+        "cosine_similarity": 0.8911496996879578,
+        "homography_inliers": 20,
+        "inlier_rate": 0.6896551724137931,
+        "min_area_overlap": 0.6136164372686502,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "c11878009adc87b6c852b79e0c06bf9fb241ed8eb7cee556b711bf7190485da2",
+      "right_image_sha256": "0641b6f49b1059e236a3db459584a66ab151337fdc5751c87b210eee0dc0ced0",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=29, inlier_rate=0.397260, min_area_overlap=0.231177.",
+      "evidence": {
+        "cosine_similarity": 0.8936761021614075,
+        "homography_inliers": 29,
+        "inlier_rate": 0.3972602739726027,
+        "min_area_overlap": 0.2311770660246069,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9d4b36dbebfd6f46fbc8515941632517492d117176826a47eb71ab1f4c9bfb94",
+      "right_image_sha256": "068ce78ddee71e9ae6906ed0743f07765c91779e1ad0adff7ffe4d6455035e60",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1663, inlier_rate=0.952463, min_area_overlap=0.516928.",
+      "evidence": {
+        "cosine_similarity": 0.9833653569221497,
+        "homography_inliers": 1663,
+        "inlier_rate": 0.9524627720504009,
+        "min_area_overlap": 0.5169275266263985,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "f7754fbaf0afcf44f6c5e9237cda461e0b28099b8cc4992185e77abb5e1c06d9",
+      "right_image_sha256": "068ce78ddee71e9ae6906ed0743f07765c91779e1ad0adff7ffe4d6455035e60",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=2320, inlier_rate=0.978490, min_area_overlap=0.799251.",
+      "evidence": {
+        "cosine_similarity": 0.9739221930503845,
+        "homography_inliers": 2320,
+        "inlier_rate": 0.9784900885702236,
+        "min_area_overlap": 0.7992509724948051,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "073fdaaa06ba0add02235999464851dc3abbc3265c6e119311bdf8b4907c0a34",
+      "right_image_sha256": "faa20c7e207fbae41e3ee6619fc15aa2702aa94fb51fb9ccfb6130ca95b9c8f4",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=190, inlier_rate=0.837004, min_area_overlap=0.460300.",
+      "evidence": {
+        "cosine_similarity": 0.894524097442627,
+        "homography_inliers": 190,
+        "inlier_rate": 0.8370044052863436,
+        "min_area_overlap": 0.46030033446806345,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "67d761f920de4f65ada6448256279a167522db9eb8f1e61165450f5cdde48398",
+      "right_image_sha256": "083825d8d77f3b66100f887f6563894460ec293aa9ebed88e5ca691192ce3a2e",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=747, inlier_rate=0.685321, min_area_overlap=0.301737.",
+      "evidence": {
+        "cosine_similarity": 0.9887750148773193,
+        "homography_inliers": 747,
+        "inlier_rate": 0.6853211009174311,
+        "min_area_overlap": 0.3017368896484375,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "084020f76d171a3a8efeeed9c7636e7e31a0e73944f61e5317a0811096ad6d76",
+      "right_image_sha256": "331b1b49aecd295c2804a4d45f71698a64f048f4abadd6d6a5165b69aeeb5322",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=86, inlier_rate=0.914894, min_area_overlap=0.945806.",
+      "evidence": {
+        "cosine_similarity": 0.9434243440628052,
+        "homography_inliers": 86,
+        "inlier_rate": 0.9148936170212766,
+        "min_area_overlap": 0.9458061694245975,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "31f26a148c76a19160e0d82fe13c6d3a3dfd7b2a97d0b3c788b027bd90fa1d5d",
+      "right_image_sha256": "09f7b9b094ca2236eb2c0340496085f70210cdcb1f510983aa92755edf049682",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=387, inlier_rate=0.919240, min_area_overlap=0.283778.",
+      "evidence": {
+        "cosine_similarity": 0.9525251984596252,
+        "homography_inliers": 387,
+        "inlier_rate": 0.9192399049881235,
+        "min_area_overlap": 0.2837782659678146,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4e38352543bef7cb8851503e7b7981aefd0c72b1e34354219cd7f5a0b41ca744",
+      "right_image_sha256": "0c99da378e77dbdf7ede176195bea10cc0c7f4c48924c80a3478ef734c431b24",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1134, inlier_rate=0.899286, min_area_overlap=0.905481.",
+      "evidence": {
+        "cosine_similarity": 0.9590129852294922,
+        "homography_inliers": 1134,
+        "inlier_rate": 0.8992862807295797,
+        "min_area_overlap": 0.9054811419794737,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "47cb980a51a51e5cdfd34689e95dbb85f55c51a348fe28a12e83a6e3f27db807",
+      "right_image_sha256": "0d9530629bc8cfcf9092afa09a27246257bcfe684bd716fccc8eb70438d415ff",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=21, inlier_rate=0.552632, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.8962865471839905,
+        "homography_inliers": 21,
+        "inlier_rate": 0.5526315789473685,
+        "min_area_overlap": 1.0000000442213457,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "475ddbc415395b18429aa5a93a146ca8a64a9c8d565e99216627f24004f3fd22",
+      "right_image_sha256": "0db16ef3fd80229b8af39946274581ee0bc86065b3520859b9a4cbc2c82d0994",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:57:50Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=528, inlier_rate=0.868421, min_area_overlap=0.475920.",
+      "evidence": {
+        "cosine_similarity": 0.9567121267318726,
+        "homography_inliers": 528,
+        "inlier_rate": 0.868421052631579,
+        "min_area_overlap": 0.47591972532608956,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "0e3b1b8fcc963806e18921e9113977384f1c5e37fc105a9d7444202c59d83031",
+      "right_image_sha256": "20e09e85978e2d922ede0f62df3ff51c84a16b99225edcc0bfa12cf7f556588b",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=148, inlier_rate=0.808743, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.8613438606262207,
+        "homography_inliers": 148,
+        "inlier_rate": 0.8087431693989071,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d6a32e7b053e2703311ddefcd2fc1824b1aa23a47d2db3dec320f2ecdced469a",
+      "right_image_sha256": "0fbf05a64f919de3b32974e18673c25adef8a2246a7a560d59e128715289b5d5",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=913, inlier_rate=0.956021, min_area_overlap=0.752781.",
+      "evidence": {
+        "cosine_similarity": 0.9634618759155273,
+        "homography_inliers": 913,
+        "inlier_rate": 0.956020942408377,
+        "min_area_overlap": 0.7527805217887232,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "876e634b4c072ac3a12da9e612e43369b842282015b5b44f3681960281c9a799",
+      "right_image_sha256": "0fc78008014b0514c4f9a7fdb3dbf254c8c11b77821f3526c950b1eae7c00132",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=303, inlier_rate=0.858357, min_area_overlap=0.301593.",
+      "evidence": {
+        "cosine_similarity": 0.9773657321929932,
+        "homography_inliers": 303,
+        "inlier_rate": 0.8583569405099151,
+        "min_area_overlap": 0.3015932722919411,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "97da1d79a1649917acf16dfeb370c5d6e2280e9f2245ebdd9cccee60307154d6",
+      "right_image_sha256": "0feb5ba9bf97de16022520a32b466c13f8f17269eb87b98bc7b1e7ca192f0acc",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=287, inlier_rate=0.827089, min_area_overlap=0.232330.",
+      "evidence": {
+        "cosine_similarity": 0.960197389125824,
+        "homography_inliers": 287,
+        "inlier_rate": 0.8270893371757925,
+        "min_area_overlap": 0.23232977779763153,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "3b1e0ec0cd4ac9fe5a64d6d601456322339f87ab1b0fda64a3b3422f59db82c8",
+      "right_image_sha256": "13ce9b469680131a0c207fb8c28a98f2f7801b18f3a72daa7bb1234aeea353a3",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=934, inlier_rate=0.957949, min_area_overlap=0.899637.",
+      "evidence": {
+        "cosine_similarity": 0.9872034788131714,
+        "homography_inliers": 934,
+        "inlier_rate": 0.9579487179487179,
+        "min_area_overlap": 0.8996373670625571,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "13ce9b469680131a0c207fb8c28a98f2f7801b18f3a72daa7bb1234aeea353a3",
+      "right_image_sha256": "a94d9b46411bef0b95e780ba485547b4c7cb38c9bfd4454b6ccc67e09522a305",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=295, inlier_rate=0.893939, min_area_overlap=0.913688.",
+      "evidence": {
+        "cosine_similarity": 0.962288498878479,
+        "homography_inliers": 295,
+        "inlier_rate": 0.8939393939393939,
+        "min_area_overlap": 0.913687505033817,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "14beecd7efb7cf9a2cefdc054d0bd437ccca2af370902b3343bfa51d6056e85c",
+      "right_image_sha256": "469da5aa3780179207eb875184e7309dca3de18db6e7f8781c4f88a2ec07bac4",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1320, inlier_rate=0.847240, min_area_overlap=0.479575.",
+      "evidence": {
+        "cosine_similarity": 0.994707465171814,
+        "homography_inliers": 1320,
+        "inlier_rate": 0.8472400513478819,
+        "min_area_overlap": 0.479574853515625,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "15227cb4f821983d1ac96272a3de6214064a8b07b070612158cce643dec9677c",
+      "right_image_sha256": "e7793dba50b9b3b44c8dbb7a7ece88d3ea872eff309a7d31c6b9fdd0f4dd3fc4",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=977, inlier_rate=0.946705, min_area_overlap=0.586493.",
+      "evidence": {
+        "cosine_similarity": 0.9908972382545471,
+        "homography_inliers": 977,
+        "inlier_rate": 0.9467054263565892,
+        "min_area_overlap": 0.5864934331594328,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "8995bb74d592505b3f972ac7994e496f03a60515b801926915ac943b214e53a6",
+      "right_image_sha256": "17c883bb82b5ede2a7d04bf9a7cf0930f91d44a839554288a033955372a5bb50",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=170, inlier_rate=0.674603, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9336833357810974,
+        "homography_inliers": 170,
+        "inlier_rate": 0.6746031746031746,
+        "min_area_overlap": 0.9999999605892528,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a84a6e37ed7fb1ed2504c70d54ef0b14244810d7246a1d3e71ef3325bf923f6b",
+      "right_image_sha256": "17c883bb82b5ede2a7d04bf9a7cf0930f91d44a839554288a033955372a5bb50",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=169, inlier_rate=0.744493, min_area_overlap=0.990698.",
+      "evidence": {
+        "cosine_similarity": 0.9301323890686035,
+        "homography_inliers": 169,
+        "inlier_rate": 0.7444933920704846,
+        "min_area_overlap": 0.9906982874885373,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "fbf45119787ac826d3a1ff71cd3696d60f8c0191fa7252f10dab567268a327ce",
+      "right_image_sha256": "17c883bb82b5ede2a7d04bf9a7cf0930f91d44a839554288a033955372a5bb50",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=105, inlier_rate=0.603448, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9312565922737122,
+        "homography_inliers": 105,
+        "inlier_rate": 0.603448275862069,
+        "min_area_overlap": 1.0000000272516134,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "17e5a4699f16d48e14f89d13cbfb6d829f3473ac10f371711f992a140c99e7aa",
+      "right_image_sha256": "82cdef3cbd350c10c0e8c400c9982e5cb6c406a2124f31d74e51df3da13d4682",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=84, inlier_rate=0.525000, min_area_overlap=0.706621.",
+      "evidence": {
+        "cosine_similarity": 0.9041275382041931,
+        "homography_inliers": 84,
+        "inlier_rate": 0.525,
+        "min_area_overlap": 0.706621279697493,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "f97dc311158151944955b91e3d0306805c549a21037204914122553f1673dc44",
+      "right_image_sha256": "17e5a4699f16d48e14f89d13cbfb6d829f3473ac10f371711f992a140c99e7aa",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=152, inlier_rate=0.800000, min_area_overlap=0.894112.",
+      "evidence": {
+        "cosine_similarity": 0.9693338871002197,
+        "homography_inliers": 152,
+        "inlier_rate": 0.8,
+        "min_area_overlap": 0.8941118651442155,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "1824c1f22c2f9120b987b3457e3d4b66fca85c462d2b9f43837173a51b2b8fa3",
+      "right_image_sha256": "b1592b860d50f1e8de1b64cb114e92cbd4b71668558d0499fe155e1471280f01",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=308, inlier_rate=0.662366, min_area_overlap=0.251854.",
+      "evidence": {
+        "cosine_similarity": 0.9855659604072571,
+        "homography_inliers": 308,
+        "inlier_rate": 0.6623655913978495,
+        "min_area_overlap": 0.2518542898570228,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "18d2f82b4ccd8c58d2747c7b1634e992d54d1604b9bdc3e68598ae0bb9d30407",
+      "right_image_sha256": "80f27672e97674cb4091b7c3ad0da20b876389e00a3365f5b01ad3971ad34ae7",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=100, inlier_rate=0.628931, min_area_overlap=0.592312.",
+      "evidence": {
+        "cosine_similarity": 0.9165927171707153,
+        "homography_inliers": 100,
+        "inlier_rate": 0.6289308176100629,
+        "min_area_overlap": 0.592312257063124,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cbfe982dda1cdd3879125295fe69800a4cf88eb16f086a706f9e27382b5fd0e1",
+      "right_image_sha256": "18d2f82b4ccd8c58d2747c7b1634e992d54d1604b9bdc3e68598ae0bb9d30407",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=115, inlier_rate=0.580808, min_area_overlap=0.562879.",
+      "evidence": {
+        "cosine_similarity": 0.8710036873817444,
+        "homography_inliers": 115,
+        "inlier_rate": 0.5808080808080808,
+        "min_area_overlap": 0.5628786228032879,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d1a44f172973ed725355cf2ee884efcf7eed23062e7bc6189f007f7b22c6660f",
+      "right_image_sha256": "18d2f82b4ccd8c58d2747c7b1634e992d54d1604b9bdc3e68598ae0bb9d30407",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=118, inlier_rate=0.519824, min_area_overlap=0.596827.",
+      "evidence": {
+        "cosine_similarity": 0.8818756937980652,
+        "homography_inliers": 118,
+        "inlier_rate": 0.5198237885462555,
+        "min_area_overlap": 0.5968266917083433,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "3c7efddfc7bf34bf773b7dff7d99556d94a61e2de62068eb08b6732a8e3a8236",
+      "right_image_sha256": "18e888236c76d8a25f4f50eba2a35fb475f0eba6f423df2f3c914eb0558be752",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=599, inlier_rate=0.978758, min_area_overlap=0.859489.",
+      "evidence": {
+        "cosine_similarity": 0.9050312042236328,
+        "homography_inliers": 599,
+        "inlier_rate": 0.9787581699346405,
+        "min_area_overlap": 0.859489444299762,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "65de6feae7937247e9779c85d5d8877f5191a241b9ec57a8ff9cc204f7661f2a",
+      "right_image_sha256": "18e888236c76d8a25f4f50eba2a35fb475f0eba6f423df2f3c914eb0558be752",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=882, inlier_rate=0.976744, min_area_overlap=0.733583.",
+      "evidence": {
+        "cosine_similarity": 0.9011464715003967,
+        "homography_inliers": 882,
+        "inlier_rate": 0.9767441860465116,
+        "min_area_overlap": 0.7335829100507018,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "fb2e8d6b50bbc0808d20e9eddb7ee9df94323240d2e241616f1a72cd51951d52",
+      "right_image_sha256": "18e888236c76d8a25f4f50eba2a35fb475f0eba6f423df2f3c914eb0558be752",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=849, inlier_rate=0.987209, min_area_overlap=0.876530.",
+      "evidence": {
+        "cosine_similarity": 0.8994685411453247,
+        "homography_inliers": 849,
+        "inlier_rate": 0.9872093023255814,
+        "min_area_overlap": 0.8765301112173247,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "1cb4b96746b4faf65a72027a1c849e8e25b1862d58ff68e2234c332ae8aae9bb",
+      "right_image_sha256": "4df3f4b7fe636af94b9dae2eb55d56915776178b585429481d873fbff1d7c553",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1671, inlier_rate=0.987589, min_area_overlap=0.912306.",
+      "evidence": {
+        "cosine_similarity": 0.9864984750747681,
+        "homography_inliers": 1671,
+        "inlier_rate": 0.9875886524822695,
+        "min_area_overlap": 0.9123064877287106,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2166224724ac3c14f16641a96bddedc70b64a206f83c52e82d1ba212203bf060",
+      "right_image_sha256": "bcb5790c001ee6623c5f031be17fcebf2bcbbaa214f3b1226b12f70d78dd8b48",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1709, inlier_rate=0.982184, min_area_overlap=0.791096.",
+      "evidence": {
+        "cosine_similarity": 0.9823410511016846,
+        "homography_inliers": 1709,
+        "inlier_rate": 0.982183908045977,
+        "min_area_overlap": 0.7910956704622613,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2236e17c0d9c19f36948f09b0d16e3ab360e4fc83859e505c7e78b8ea6ace9db",
+      "right_image_sha256": "65100ec653080127434bf46631f4576f1bfcdf4d482ae336a5565ea5fd74a3e4",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=359, inlier_rate=0.804933, min_area_overlap=0.443094.",
+      "evidence": {
+        "cosine_similarity": 0.9801010489463806,
+        "homography_inliers": 359,
+        "inlier_rate": 0.804932735426009,
+        "min_area_overlap": 0.4430936352852737,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "22655cddeecc753d13e7209e1f9e6879553e91630f17b8344861a86dbc73a9c9",
+      "right_image_sha256": "312ff08836164b98e16cc86597a6a11921343252dd66e298d39db9c732c93002",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=902, inlier_rate=0.933747, min_area_overlap=0.690256.",
+      "evidence": {
+        "cosine_similarity": 0.9253104329109192,
+        "homography_inliers": 902,
+        "inlier_rate": 0.9337474120082816,
+        "min_area_overlap": 0.6902560763888889,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "22655cddeecc753d13e7209e1f9e6879553e91630f17b8344861a86dbc73a9c9",
+      "right_image_sha256": "3d77ef6c0cd01e9762fe8fc8c934f432a970ef4c79c90c5d0b5c66bb47e4058f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=354, inlier_rate=0.832941, min_area_overlap=0.922900.",
+      "evidence": {
+        "cosine_similarity": 0.8887898921966553,
+        "homography_inliers": 354,
+        "inlier_rate": 0.8329411764705882,
+        "min_area_overlap": 0.9228997524607354,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "256b317cbc126dd6f2d52550bb9e49c74901130c9d3374d84197305422cf7275",
+      "right_image_sha256": "e7793af0e6b20bc6251cdc7f777e5e2ac78981e52612b24aba7875b6ef2adc56",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=202, inlier_rate=0.770992, min_area_overlap=0.241570.",
+      "evidence": {
+        "cosine_similarity": 0.9428974986076355,
+        "homography_inliers": 202,
+        "inlier_rate": 0.7709923664122137,
+        "min_area_overlap": 0.24156990853157845,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "3ffe5328ac625f405c1acec3df3d3ae6f8c02bfd39aebaa10a12bedc5ae88f79",
+      "right_image_sha256": "2700bcce40e46cbd936b5524fc352fa56a69310f03788c3c78dbd329089342a8",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=46, inlier_rate=0.414414, min_area_overlap=0.831242.",
+      "evidence": {
+        "cosine_similarity": 0.9014478921890259,
+        "homography_inliers": 46,
+        "inlier_rate": 0.4144144144144144,
+        "min_area_overlap": 0.8312416628631664,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "fd7bdd210e2dd54251f47169cc8e35d9308aad84b7d54cbf90000aa55de5cacd",
+      "right_image_sha256": "282ac9bcc28271410bc58d14ba265aa20b95cbd28d8fe0c08e4e4fae857a0973",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=39, inlier_rate=0.361111, min_area_overlap=0.561291.",
+      "evidence": {
+        "cosine_similarity": 0.9085775017738342,
+        "homography_inliers": 39,
+        "inlier_rate": 0.3611111111111111,
+        "min_area_overlap": 0.5612907623913936,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "28da1e24f5ce9ec47f960ff1c5328ecfab0ff18606a1d7898d2cfd8a58a7b40f",
+      "right_image_sha256": "b31ae1a802c35206957b936e9e50195f6bb567bec9b8535b668590b1b2083151",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=33, inlier_rate=0.445946, min_area_overlap=0.835087.",
+      "evidence": {
+        "cosine_similarity": 0.9132323265075684,
+        "homography_inliers": 33,
+        "inlier_rate": 0.44594594594594594,
+        "min_area_overlap": 0.835086653173612,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2a97765eee6c7305ebb4da76214e8e08e1f46998027fef5054cca2ecf616b205",
+      "right_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=122, inlier_rate=0.619289, min_area_overlap=0.360194.",
+      "evidence": {
+        "cosine_similarity": 0.897618293762207,
+        "homography_inliers": 122,
+        "inlier_rate": 0.6192893401015228,
+        "min_area_overlap": 0.36019390143050173,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2a97765eee6c7305ebb4da76214e8e08e1f46998027fef5054cca2ecf616b205",
+      "right_image_sha256": "9931ce954de3d6c8a0296ad175ac385b80fc9d694af163e5639a0107f4ccfd28",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=100, inlier_rate=0.558659, min_area_overlap=0.307417.",
+      "evidence": {
+        "cosine_similarity": 0.896571934223175,
+        "homography_inliers": 100,
+        "inlier_rate": 0.5586592178770949,
+        "min_area_overlap": 0.30741692547821486,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2d15ce821550dffba437338de3a3a1fe45ba1ba6333629cd356e90b0743535b0",
+      "right_image_sha256": "39942e47cdf68808aabbf4fc1b4771610a08c4ac4d2df061d17a3ce355f87f76",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T01:01:55Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=243, inlier_rate=0.846690, min_area_overlap=0.969073.",
+      "evidence": {
+        "cosine_similarity": 0.949514627456665,
+        "homography_inliers": 243,
+        "inlier_rate": 0.8466898954703833,
+        "min_area_overlap": 0.9690730514207097,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2d15ce821550dffba437338de3a3a1fe45ba1ba6333629cd356e90b0743535b0",
+      "right_image_sha256": "4d8e24dcbc7a104482321226110bee3ca234c623831334d2a1d1b7fee1f4685c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T01:01:55Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=331, inlier_rate=0.829574, min_area_overlap=0.362820.",
+      "evidence": {
+        "cosine_similarity": 0.9625610113143921,
+        "homography_inliers": 331,
+        "inlier_rate": 0.8295739348370927,
+        "min_area_overlap": 0.3628200065680744,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2e21c35ccc6e388ea08ff25c338ceefd49f9ea1a4bff31d67711116201bfa582",
+      "right_image_sha256": "88e02174a933adbc4e935e299836ac12229c2a5f6ee3a74907e2651a263547fc",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=984, inlier_rate=0.983017, min_area_overlap=0.588324.",
+      "evidence": {
+        "cosine_similarity": 0.9703061580657959,
+        "homography_inliers": 984,
+        "inlier_rate": 0.983016983016983,
+        "min_area_overlap": 0.5883243198837925,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2f41852a479f2ca405c7162f957c1e5a89198b7f6a356d14cd9360ee85bdca34",
+      "right_image_sha256": "e880cd4e4e058ae883d12cd57d6736e40fbe85b3eed6d8abecdadf8e0a5fa130",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=416, inlier_rate=0.717241, min_area_overlap=0.286650.",
+      "evidence": {
+        "cosine_similarity": 0.9774813055992126,
+        "homography_inliers": 416,
+        "inlier_rate": 0.7172413793103448,
+        "min_area_overlap": 0.286650241962475,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "e6a558958b52d6970cfab1e70e71562538dcd25ba7af9587de82c7ab7eb378ae",
+      "right_image_sha256": "2fb1a8faf19bcba3eda6383c5f06921f84e39f6c67dba5a9daf050d81cc4fd88",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=767, inlier_rate=0.970886, min_area_overlap=0.293017.",
+      "evidence": {
+        "cosine_similarity": 0.9398340582847595,
+        "homography_inliers": 767,
+        "inlier_rate": 0.970886075949367,
+        "min_area_overlap": 0.29301657123750685,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "2fcb275329d1b2bb6d76262b553b4577d79f7a5edbedfa8e54b393e3602a23cb",
+      "right_image_sha256": "b3354d12fbf68226138d846eeeb1373839fa64b93c4d63efc18b4a18800b91bc",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=27, inlier_rate=0.562500, min_area_overlap=0.597266.",
+      "evidence": {
+        "cosine_similarity": 0.9219626188278198,
+        "homography_inliers": 27,
+        "inlier_rate": 0.5625,
+        "min_area_overlap": 0.5972656494751112,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "99eecd5cea336ed37ff29fcd08f2b4526dde1a87deef1aceeec455d90b1b2e22",
+      "right_image_sha256": "30abad5c8066293a2d3176560460f550b6e8e9ce12f494f6816bed701de7d85f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=101, inlier_rate=0.664474, min_area_overlap=0.999828.",
+      "evidence": {
+        "cosine_similarity": 0.8600817918777466,
+        "homography_inliers": 101,
+        "inlier_rate": 0.6644736842105263,
+        "min_area_overlap": 0.9998282957801756,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "312ecd40da08ee995877b2f183d9f46fe9983681699c5c4129b149322c88310a",
+      "right_image_sha256": "e39a44e12e5d82c9c52bfda585c000c64f029161a81946e7efd669761eec5bd7",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=330, inlier_rate=0.825000, min_area_overlap=0.244472.",
+      "evidence": {
+        "cosine_similarity": 0.9329236745834351,
+        "homography_inliers": 330,
+        "inlier_rate": 0.825,
+        "min_area_overlap": 0.2444719505896299,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "31f26a148c76a19160e0d82fe13c6d3a3dfd7b2a97d0b3c788b027bd90fa1d5d",
+      "right_image_sha256": "b157a80ad0b3cbdfa84aa8a701afb70c5010009253ac7ae5f7abddcb89d0d2bc",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=35, inlier_rate=0.538462, min_area_overlap=0.253239.",
+      "evidence": {
+        "cosine_similarity": 0.9511011838912964,
+        "homography_inliers": 35,
+        "inlier_rate": 0.5384615384615384,
+        "min_area_overlap": 0.25323884386250367,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "331b1b49aecd295c2804a4d45f71698a64f048f4abadd6d6a5165b69aeeb5322",
+      "right_image_sha256": "9313287cade6a00c80efbd1c9e8497bcc325754c7082420b5f4e21d0a7e38b1f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=43, inlier_rate=0.796296, min_area_overlap=0.821420.",
+      "evidence": {
+        "cosine_similarity": 0.9308465719223022,
+        "homography_inliers": 43,
+        "inlier_rate": 0.7962962962962963,
+        "min_area_overlap": 0.8214195834093849,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "df1a26a76304ee3227cb771f96d26a34df120de8d7c3a2db217ce9c422e3f31e",
+      "right_image_sha256": "352eee734798ef8659e1260b99a8a8fdbe84b1894ef2dec86f3720caef169746",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=584, inlier_rate=0.955810, min_area_overlap=0.862592.",
+      "evidence": {
+        "cosine_similarity": 0.9834568500518799,
+        "homography_inliers": 584,
+        "inlier_rate": 0.955810147299509,
+        "min_area_overlap": 0.8625916321025489,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a0203c08738a82520d3301f2438cd7521dd236b59447f46bfe2ca49a2249118f",
+      "right_image_sha256": "35c1b50df94ae48388dca185b9a3753d5621dc331a7014fa2cf1dc8a1bbb4b32",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1120, inlier_rate=0.968021, min_area_overlap=0.976072.",
+      "evidence": {
+        "cosine_similarity": 0.9884724020957947,
+        "homography_inliers": 1120,
+        "inlier_rate": 0.9680207433016422,
+        "min_area_overlap": 0.97607197265625,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "572447e3dbc747c3490fcb19b20ed1873db1deb690225f2c8224efede43d4d7d",
+      "right_image_sha256": "37710bc409ee3afa3c4301aa1690351b504042e831f521553b75ef9c8135dddf",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=119, inlier_rate=0.629630, min_area_overlap=0.704435.",
+      "evidence": {
+        "cosine_similarity": 0.9206210374832153,
+        "homography_inliers": 119,
+        "inlier_rate": 0.6296296296296297,
+        "min_area_overlap": 0.7044345130558197,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "63486f7e755f0a1031c5fa71d2687b380aa1a3a24010298b90b92a5aecf20b66",
+      "right_image_sha256": "38d1c3f279f3cf563b0b67d0c40128ac23ddbb8724cd0f8cfc300c5220951ad5",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=95, inlier_rate=0.693431, min_area_overlap=0.413853.",
+      "evidence": {
+        "cosine_similarity": 0.9542755484580994,
+        "homography_inliers": 95,
+        "inlier_rate": 0.6934306569343066,
+        "min_area_overlap": 0.4138532727197149,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "3c5a7996dd64d6125b63aef4db2809c19087c37ecef392e2e74a05c84cfe4b3c",
+      "right_image_sha256": "e81f6593177f1f4c45ecfbed8810fba7930dcd05fe8658aab944370a1d03d983",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=327, inlier_rate=0.840617, min_area_overlap=0.995987.",
+      "evidence": {
+        "cosine_similarity": 0.7760235071182251,
+        "homography_inliers": 327,
+        "inlier_rate": 0.8406169665809768,
+        "min_area_overlap": 0.9959874849512678,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "f6600cbda657028c39bb1ebedd6b878c3236907061a5061c1a147dc0151be158",
+      "right_image_sha256": "3d77ef6c0cd01e9762fe8fc8c934f432a970ef4c79c90c5d0b5c66bb47e4058f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=225, inlier_rate=0.827206, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9681602120399475,
+        "homography_inliers": 225,
+        "inlier_rate": 0.8272058823529411,
+        "min_area_overlap": 1.0000000499874575,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9d4e63ede0e70247bab45fdc8d69f3541ad68e43a694019ac7651aa8b60d01fc",
+      "right_image_sha256": "3f14d2120e2f019fcce88ac0338d61bc0f4a1b1f10aa448d23eaf8c54b89e2dd",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=36, inlier_rate=0.455696, min_area_overlap=0.777622.",
+      "evidence": {
+        "cosine_similarity": 0.8869355916976929,
+        "homography_inliers": 36,
+        "inlier_rate": 0.45569620253164556,
+        "min_area_overlap": 0.777621898266034,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "b3354d12fbf68226138d846eeeb1373839fa64b93c4d63efc18b4a18800b91bc",
+      "right_image_sha256": "3f14d2120e2f019fcce88ac0338d61bc0f4a1b1f10aa448d23eaf8c54b89e2dd",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=27, inlier_rate=0.551020, min_area_overlap=0.432548.",
+      "evidence": {
+        "cosine_similarity": 0.8740343451499939,
+        "homography_inliers": 27,
+        "inlier_rate": 0.5510204081632653,
+        "min_area_overlap": 0.4325480289043635,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "3fb4eb2586cff4b909493aa0463dd30efb2683015d1b73e5284e803a86b2479b",
+      "right_image_sha256": "e315802fbdf50d72c5491a196d2d684904d3c3384419e63a30e67faf9f91a9b3",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1276, inlier_rate=0.952239, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9908953905105591,
+        "homography_inliers": 1276,
+        "inlier_rate": 0.9522388059701492,
+        "min_area_overlap": 0.9999999906032162,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "41f87b5c156f0522ebe7f4293413e41956bcf4ae9eee39f6238e6e963a0fcd4f",
+      "right_image_sha256": "ab4722a704d386635a26454b6f6859f3ac05aec88a3e987d27c304210317c092",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=20, inlier_rate=0.425532, min_area_overlap=0.613775.",
+      "evidence": {
+        "cosine_similarity": 0.8711382150650024,
+        "homography_inliers": 20,
+        "inlier_rate": 0.425531914893617,
+        "min_area_overlap": 0.6137747980377111,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "97da1d79a1649917acf16dfeb370c5d6e2280e9f2245ebdd9cccee60307154d6",
+      "right_image_sha256": "4336ff302c302bff6a9f2ad3eb235798537ae4d73009a50c654e3fe2899c886d",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=197, inlier_rate=0.766537, min_area_overlap=0.340735.",
+      "evidence": {
+        "cosine_similarity": 0.9510741233825684,
+        "homography_inliers": 197,
+        "inlier_rate": 0.7665369649805448,
+        "min_area_overlap": 0.3407350355344111,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9097b7b1ebd07f772c73c767a4a8903e783f80df60849246015550f9b67b56db",
+      "right_image_sha256": "441fef569c1b28658782b15cb0ed99821ddb397b3a91fed28be32ba15ed27361",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=455, inlier_rate=0.875000, min_area_overlap=0.462656.",
+      "evidence": {
+        "cosine_similarity": 0.9330577254295349,
+        "homography_inliers": 455,
+        "inlier_rate": 0.875,
+        "min_area_overlap": 0.4626561254968828,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "b21b743717cb631432d5e4b7dc9f928fe864047c62ae3659bdd7e3da2091667e",
+      "right_image_sha256": "441fef569c1b28658782b15cb0ed99821ddb397b3a91fed28be32ba15ed27361",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=339, inlier_rate=0.901596, min_area_overlap=0.372845.",
+      "evidence": {
+        "cosine_similarity": 0.9628751873970032,
+        "homography_inliers": 339,
+        "inlier_rate": 0.901595744680851,
+        "min_area_overlap": 0.3728446133314455,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "49280c88a84efab92a816db51924e9c29eced7fd7ac78663e603813a1cca6e0b",
+      "right_image_sha256": "572590300525093bfabda8702fe14750a422577683306890740c7d7c7ff2fd1d",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=455, inlier_rate=0.913655, min_area_overlap=0.600871.",
+      "evidence": {
+        "cosine_similarity": 0.9575707316398621,
+        "homography_inliers": 455,
+        "inlier_rate": 0.9136546184738956,
+        "min_area_overlap": 0.6008705755325023,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "49280c88a84efab92a816db51924e9c29eced7fd7ac78663e603813a1cca6e0b",
+      "right_image_sha256": "fe92822e9d404037ad3919cc2404c416c212e8f37f0f1a2b79b52b5f564ce7c9",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1391, inlier_rate=0.987225, min_area_overlap=0.759446.",
+      "evidence": {
+        "cosine_similarity": 0.9622159004211426,
+        "homography_inliers": 1391,
+        "inlier_rate": 0.9872249822569198,
+        "min_area_overlap": 0.7594464489795918,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4961799b9781f3253d4a3417134b2a69d20110dffb2605be302fff6cc80215be",
+      "right_image_sha256": "c2a4eb437a92749958f42c8cebc00386a1b1167abbc6e74cf2f78c09ce7a59e1",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:50:24Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=56, inlier_rate=0.549020, min_area_overlap=0.979656.",
+      "evidence": {
+        "cosine_similarity": 0.9327111840248108,
+        "homography_inliers": 56,
+        "inlier_rate": 0.5490196078431373,
+        "min_area_overlap": 0.9796561013256743,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4aab17c57f4a41eec806306931475bac0bd67b876be9d6a81cb85cb6e2cd290c",
+      "right_image_sha256": "73528c34f5bf535be3eb79173f9f54a16f15144e8ef21237b48233b3691fecce",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=24, inlier_rate=0.666667, min_area_overlap=0.417638.",
+      "evidence": {
+        "cosine_similarity": 0.9179126620292664,
+        "homography_inliers": 24,
+        "inlier_rate": 0.6666666666666666,
+        "min_area_overlap": 0.4176376953125,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4aab17c57f4a41eec806306931475bac0bd67b876be9d6a81cb85cb6e2cd290c",
+      "right_image_sha256": "f76f1b328830a5758f82945d176cbed459006c3b9eea9902b9669f419e12c66f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=560, inlier_rate=0.987654, min_area_overlap=0.949902.",
+      "evidence": {
+        "cosine_similarity": 0.9902179837226868,
+        "homography_inliers": 560,
+        "inlier_rate": 0.9876543209876543,
+        "min_area_overlap": 0.94990166015625,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4ab9b68d4616c2ba7fc1364f0e163bfd188e80b0d7df9a726c264caab8d6cfe6",
+      "right_image_sha256": "5f31540ad358594fc01949872f3049066753b283584d01845ed6ce3fb4aba333",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=631, inlier_rate=0.989028, min_area_overlap=0.900095.",
+      "evidence": {
+        "cosine_similarity": 0.8747037053108215,
+        "homography_inliers": 631,
+        "inlier_rate": 0.9890282131661442,
+        "min_area_overlap": 0.900094815231826,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4bbbbb18daac373b32f1c499557b2d3d06c0b0a5c475d093341aa8d5d6a11927",
+      "right_image_sha256": "9df5c0e626a93b05f4c284f252e581dd032f74e3fd6c7badad55c8f892e0223e",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=35, inlier_rate=0.376344, min_area_overlap=0.227487.",
+      "evidence": {
+        "cosine_similarity": 0.9149879217147827,
+        "homography_inliers": 35,
+        "inlier_rate": 0.3763440860215054,
+        "min_area_overlap": 0.22748680047899855,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4bbbbb18daac373b32f1c499557b2d3d06c0b0a5c475d093341aa8d5d6a11927",
+      "right_image_sha256": "c840c42921dfc731a962c8b978518be533b3d9966795a96aa897df478bc3434f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=34, inlier_rate=0.386364, min_area_overlap=0.348013.",
+      "evidence": {
+        "cosine_similarity": 0.8998914957046509,
+        "homography_inliers": 34,
+        "inlier_rate": 0.38636363636363635,
+        "min_area_overlap": 0.34801257038894373,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "8154e82d40b376f059bcf22201d2842c242c64e7b0f583a50fb25d9a43b4e47f",
+      "right_image_sha256": "4c35717ff8bcdb0cd0a30dd19f49f0e99e36ecfad20f00fdd82ff1b0b8ec8935",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=93, inlier_rate=0.382716, min_area_overlap=0.269133.",
+      "evidence": {
+        "cosine_similarity": 0.9295048117637634,
+        "homography_inliers": 93,
+        "inlier_rate": 0.38271604938271603,
+        "min_area_overlap": 0.2691332244481958,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "60634952e3c92e36f68be5ea788e8697cfef70dc1714de82cc3635c070343c60",
+      "right_image_sha256": "4cd22373ec95a4406638068ecc7f9249741b2c034245662e9a5eb96a6fe94f7c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=208, inlier_rate=0.845528, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9255683422088623,
+        "homography_inliers": 208,
+        "inlier_rate": 0.8455284552845529,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "89cda3f9f1aeee7fb0d6e1d30bdf982edf013813ff466e8a74d7a1c51fceac50",
+      "right_image_sha256": "4cd22373ec95a4406638068ecc7f9249741b2c034245662e9a5eb96a6fe94f7c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=213, inlier_rate=0.918103, min_area_overlap=0.985678.",
+      "evidence": {
+        "cosine_similarity": 0.7980193495750427,
+        "homography_inliers": 213,
+        "inlier_rate": 0.9181034482758621,
+        "min_area_overlap": 0.9856776113208982,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "4de00d3d403225b53601dec3a60c8241fe97966eedac5a59a64d05e724f00c68",
+      "right_image_sha256": "5d3a1c3acaf868b06ba48662c5f475dbddd8c35d9ec12cc0d43c27223bdf93aa",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=20, inlier_rate=0.714286, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.8845052123069763,
+        "homography_inliers": 20,
+        "inlier_rate": 0.7142857142857143,
+        "min_area_overlap": 0.9999999605238119,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "e5c01430eaf297203cf520eb10287b973bd45ada20a59c84097874b21fdd5160",
+      "right_image_sha256": "4df3f4b7fe636af94b9dae2eb55d56915776178b585429481d873fbff1d7c553",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=245, inlier_rate=0.972222, min_area_overlap=0.430295.",
+      "evidence": {
+        "cosine_similarity": 0.9583210945129395,
+        "homography_inliers": 245,
+        "inlier_rate": 0.9722222222222222,
+        "min_area_overlap": 0.43029460953241233,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "503260585cea1cef5e5a34127fde8c46b53da8e23091c7bb304f012ceffb9712",
+      "right_image_sha256": "9313287cade6a00c80efbd1c9e8497bcc325754c7082420b5f4e21d0a7e38b1f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=42, inlier_rate=0.371681, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9245753288269043,
+        "homography_inliers": 42,
+        "inlier_rate": 0.37168141592920356,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "right_image_sha256": "5194ba458bd52066106cebb9c7c58c7b73dfbd3ff0c59e5b8e2a767c8b72119f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=150, inlier_rate=0.833333, min_area_overlap=0.929090.",
+      "evidence": {
+        "cosine_similarity": 0.9062371253967285,
+        "homography_inliers": 150,
+        "inlier_rate": 0.8333333333333334,
+        "min_area_overlap": 0.9290904469849545,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "80f27672e97674cb4091b7c3ad0da20b876389e00a3365f5b01ad3971ad34ae7",
+      "right_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=124, inlier_rate=0.516667, min_area_overlap=0.314213.",
+      "evidence": {
+        "cosine_similarity": 0.8987628221511841,
+        "homography_inliers": 124,
+        "inlier_rate": 0.5166666666666667,
+        "min_area_overlap": 0.3142134528908479,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "right_image_sha256": "c11878009adc87b6c852b79e0c06bf9fb241ed8eb7cee556b711bf7190485da2",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=66, inlier_rate=0.717391, min_area_overlap=0.626553.",
+      "evidence": {
+        "cosine_similarity": 0.915543794631958,
+        "homography_inliers": 66,
+        "inlier_rate": 0.717391304347826,
+        "min_area_overlap": 0.6265529272951397,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cbfe982dda1cdd3879125295fe69800a4cf88eb16f086a706f9e27382b5fd0e1",
+      "right_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=77, inlier_rate=0.452941, min_area_overlap=0.354796.",
+      "evidence": {
+        "cosine_similarity": 0.8450744152069092,
+        "homography_inliers": 77,
+        "inlier_rate": 0.45294117647058824,
+        "min_area_overlap": 0.35479641167970494,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cdb8df327b53e971e77b39e0cc5a91238a466e9c5cac2f344bd8a38ed7d76085",
+      "right_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=25, inlier_rate=0.471698, min_area_overlap=0.250777.",
+      "evidence": {
+        "cosine_similarity": 0.8283922672271729,
+        "homography_inliers": 25,
+        "inlier_rate": 0.4716981132075472,
+        "min_area_overlap": 0.2507767657021175,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d1a44f172973ed725355cf2ee884efcf7eed23062e7bc6189f007f7b22c6660f",
+      "right_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=89, inlier_rate=0.475936, min_area_overlap=0.359270.",
+      "evidence": {
+        "cosine_similarity": 0.862734317779541,
+        "homography_inliers": 89,
+        "inlier_rate": 0.47593582887700536,
+        "min_area_overlap": 0.35927001287755495,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "50a287ed050bc4eb6540dfc68471e40d6f7b87dc7f6ea57cf233a7273dbe04cb",
+      "right_image_sha256": "d843b44c9016b7e51ef1692914dd0f8683f91c1cbaa54e4f555dab0dffdf5f28",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=49, inlier_rate=0.556818, min_area_overlap=0.873028.",
+      "evidence": {
+        "cosine_similarity": 0.8834282159805298,
+        "homography_inliers": 49,
+        "inlier_rate": 0.5568181818181818,
+        "min_area_overlap": 0.8730281720592364,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "5194ba458bd52066106cebb9c7c58c7b73dfbd3ff0c59e5b8e2a767c8b72119f",
+      "right_image_sha256": "9931ce954de3d6c8a0296ad175ac385b80fc9d694af163e5639a0107f4ccfd28",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=127, inlier_rate=0.557018, min_area_overlap=0.824170.",
+      "evidence": {
+        "cosine_similarity": 0.8932520747184753,
+        "homography_inliers": 127,
+        "inlier_rate": 0.5570175438596491,
+        "min_area_overlap": 0.824169660245232,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d843b44c9016b7e51ef1692914dd0f8683f91c1cbaa54e4f555dab0dffdf5f28",
+      "right_image_sha256": "5194ba458bd52066106cebb9c7c58c7b73dfbd3ff0c59e5b8e2a767c8b72119f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=77, inlier_rate=0.506579, min_area_overlap=0.945063.",
+      "evidence": {
+        "cosine_similarity": 0.9350875616073608,
+        "homography_inliers": 77,
+        "inlier_rate": 0.506578947368421,
+        "min_area_overlap": 0.9450634224396558,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "52feb62e681c05517f25b9e402b0bc1198a4a17e60b67e1c387a8107f19980e4",
+      "right_image_sha256": "78b6270fdcfcc19a5ab9ba907d100cd9861176f25af1c1dfca9eddffb5847718",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=40, inlier_rate=0.408163, min_area_overlap=0.335098.",
+      "evidence": {
+        "cosine_similarity": 0.8908134698867798,
+        "homography_inliers": 40,
+        "inlier_rate": 0.40816326530612246,
+        "min_area_overlap": 0.33509814023423595,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "5420b2707ce6f4ce9efae1eb45bb4aa2c12d6fcf3f93a1aeab9333a8dd985e4b",
+      "right_image_sha256": "ede2c1a62ce7ed40ec3275f8e16693eec63e1532ed8a3ad583d9505af837f50e",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=106, inlier_rate=0.726027, min_area_overlap=0.992449.",
+      "evidence": {
+        "cosine_similarity": 0.9004114270210266,
+        "homography_inliers": 106,
+        "inlier_rate": 0.726027397260274,
+        "min_area_overlap": 0.9924488208968203,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "82773ea09e9f59c6cb7a0b8e5fcceab74bf895233f54e360478387e6a1ee7cda",
+      "right_image_sha256": "544ac7a056cf98f674534b965660538f96f903e41708fdb311e7c5765dded52b",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=357, inlier_rate=0.777778, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9043882489204407,
+        "homography_inliers": 357,
+        "inlier_rate": 0.7777777777777778,
+        "min_area_overlap": 0.9999999748388253,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "bf9879b606cff26965af04b65a25780f544cf822c90e4b11e1072a7274fb7060",
+      "right_image_sha256": "557726a616f77771c3d65cdbf1601572b10dec54631ba4c64648a12683585d0a",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1457, inlier_rate=0.983795, min_area_overlap=0.961534.",
+      "evidence": {
+        "cosine_similarity": 0.9955204129219055,
+        "homography_inliers": 1457,
+        "inlier_rate": 0.9837947332883187,
+        "min_area_overlap": 0.9615337253520577,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cd9f5e5020e7e89fa3f3db4a6719626de4618e38ef3c42360e320f50942e3088",
+      "right_image_sha256": "572590300525093bfabda8702fe14750a422577683306890740c7d7c7ff2fd1d",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=708, inlier_rate=0.932806, min_area_overlap=0.716930.",
+      "evidence": {
+        "cosine_similarity": 0.9724998474121094,
+        "homography_inliers": 708,
+        "inlier_rate": 0.932806324110672,
+        "min_area_overlap": 0.7169303075028138,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "59af2766098fd5687780f55a84bb12be4b750376be49f77a3a96a20406fcda49",
+      "right_image_sha256": "b311afbcccfffeadac2428d36eee9146d08fb22d67f7876ff649af01dd926e8a",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=123, inlier_rate=0.559091, min_area_overlap=0.959612.",
+      "evidence": {
+        "cosine_similarity": 0.9431077837944031,
+        "homography_inliers": 123,
+        "inlier_rate": 0.5590909090909091,
+        "min_area_overlap": 0.9596117889086587,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "75ad5772cb7a237a8beefa3c1fc7e87cea1af71a4197290c2873ddb94a7871b1",
+      "right_image_sha256": "59c62cb0739992b8a125c1d1d8e1127599b5af79f51377a255b2b1741e081cb0",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=45, inlier_rate=0.833333, min_area_overlap=0.686492.",
+      "evidence": {
+        "cosine_similarity": 0.9372663497924805,
+        "homography_inliers": 45,
+        "inlier_rate": 0.8333333333333334,
+        "min_area_overlap": 0.6864918522172963,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "c46881d319b30b3ed8d2a04bd2e76eaf57dc053198ceab23d2666c11dff0bca9",
+      "right_image_sha256": "59c62cb0739992b8a125c1d1d8e1127599b5af79f51377a255b2b1741e081cb0",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=126, inlier_rate=0.617647, min_area_overlap=0.653570.",
+      "evidence": {
+        "cosine_similarity": 0.9215267896652222,
+        "homography_inliers": 126,
+        "inlier_rate": 0.6176470588235294,
+        "min_area_overlap": 0.6535699911091888,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "59d3b249a9b548b1f30017a6f9173a9ffb4cbd3e00a33113619eff89dfce9b5e",
+      "right_image_sha256": "f97dc311158151944955b91e3d0306805c549a21037204914122553f1673dc44",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=283, inlier_rate=0.952862, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9595155715942383,
+        "homography_inliers": 283,
+        "inlier_rate": 0.9528619528619529,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "5adb448558f1807e43cb360c251f337c942d1d810286f2b82ca546b3a22b6baf",
+      "right_image_sha256": "ac55beb1e62baf205e1c467cb1489841f84f50b266d46e2cd66ab7880e6ca83c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=166, inlier_rate=0.954023, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.8632049560546875,
+        "homography_inliers": 166,
+        "inlier_rate": 0.9540229885057471,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "5af3f4a8d360b936d538cabd9531e6d6ed22fd1161b2f40347a69ecda09852fc",
+      "right_image_sha256": "7165510a19f617a4dcea513c95fd7d006d1bfb878fe972d28121a843235dfe30",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=39, inlier_rate=0.573529, min_area_overlap=0.975185.",
+      "evidence": {
+        "cosine_similarity": 0.8824619054794312,
+        "homography_inliers": 39,
+        "inlier_rate": 0.5735294117647058,
+        "min_area_overlap": 0.9751846194267273,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cb0557056495cb9bc22896e82aa527ed28bb57241a9eb9f8b12234b42d7f6b2e",
+      "right_image_sha256": "5be7d6dbcefe583d7be22fdb3da4350281e369876ecfb5ed101cb33622f0bc9d",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=437, inlier_rate=0.642647, min_area_overlap=0.353879.",
+      "evidence": {
+        "cosine_similarity": 0.9681654572486877,
+        "homography_inliers": 437,
+        "inlier_rate": 0.6426470588235295,
+        "min_area_overlap": 0.35387885934925967,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "5ed737e55f1df435629a48ca23cc0c6432f33c54fcd0d16005126ae5205d41e4",
+      "right_image_sha256": "9f1bf13c11fedb7d3d808b6987d01e737c7a240b63d2ae84ce6b61bae1f97cc2",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1245, inlier_rate=0.969626, min_area_overlap=0.584383.",
+      "evidence": {
+        "cosine_similarity": 0.9417130947113037,
+        "homography_inliers": 1245,
+        "inlier_rate": 0.969626168224299,
+        "min_area_overlap": 0.5843831129034851,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "5f8f365e588d826eb062fb4b30cd2acfc4e53fcb7b26e073ef8beef94fa7b0b0",
+      "right_image_sha256": "b157a80ad0b3cbdfa84aa8a701afb70c5010009253ac7ae5f7abddcb89d0d2bc",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1343, inlier_rate=0.937195, min_area_overlap=0.851430.",
+      "evidence": {
+        "cosine_similarity": 0.9693243503570557,
+        "homography_inliers": 1343,
+        "inlier_rate": 0.9371946964410328,
+        "min_area_overlap": 0.8514299930124964,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "620997c4d4fd7d34a07e9199cc7420ab5744d02f5b45b83fa257de59ded04a71",
+      "right_image_sha256": "78b6270fdcfcc19a5ab9ba907d100cd9861176f25af1c1dfca9eddffb5847718",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=62, inlier_rate=0.430556, min_area_overlap=0.466928.",
+      "evidence": {
+        "cosine_similarity": 0.8624582290649414,
+        "homography_inliers": 62,
+        "inlier_rate": 0.4305555555555556,
+        "min_area_overlap": 0.466927526084861,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "620997c4d4fd7d34a07e9199cc7420ab5744d02f5b45b83fa257de59ded04a71",
+      "right_image_sha256": "d5f79b196266e228b277054391062505d9de36b63e46da54ac1b2f5842e78a86",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=61, inlier_rate=0.388535, min_area_overlap=0.624419.",
+      "evidence": {
+        "cosine_similarity": 0.8317997455596924,
+        "homography_inliers": 61,
+        "inlier_rate": 0.3885350318471338,
+        "min_area_overlap": 0.6244189230994555,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "63486f7e755f0a1031c5fa71d2687b380aa1a3a24010298b90b92a5aecf20b66",
+      "right_image_sha256": "6e986fd9f2fc0cc8cb14d50effffa6956e660d588a02c87170f0c42f3744ca88",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=265, inlier_rate=0.846645, min_area_overlap=0.420299.",
+      "evidence": {
+        "cosine_similarity": 0.9791259169578552,
+        "homography_inliers": 265,
+        "inlier_rate": 0.8466453674121406,
+        "min_area_overlap": 0.42029852286251773,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "63486f7e755f0a1031c5fa71d2687b380aa1a3a24010298b90b92a5aecf20b66",
+      "right_image_sha256": "edd79c827b04b83cbf36c065141b7a2350f7e16cbc1d0dad47610ccd22db0656",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=50, inlier_rate=0.617284, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9282832145690918,
+        "homography_inliers": 50,
+        "inlier_rate": 0.6172839506172839,
+        "min_area_overlap": 0.9999999789152166,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a626da12b6d0ab76aa6370a59ba595121c4b01154d37263a818e5f04ebd5937e",
+      "right_image_sha256": "65100ec653080127434bf46631f4576f1bfcdf4d482ae336a5565ea5fd74a3e4",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=666, inlier_rate=0.895161, min_area_overlap=0.658883.",
+      "evidence": {
+        "cosine_similarity": 0.9802849888801575,
+        "homography_inliers": 666,
+        "inlier_rate": 0.8951612903225806,
+        "min_area_overlap": 0.6588829670415862,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "ab4722a704d386635a26454b6f6859f3ac05aec88a3e987d27c304210317c092",
+      "right_image_sha256": "6620df3fd86f34878cb8c59bb776a7c97b08b4510d9250117345ab59168063a7",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=38, inlier_rate=0.535211, min_area_overlap=0.509407.",
+      "evidence": {
+        "cosine_similarity": 0.930158257484436,
+        "homography_inliers": 38,
+        "inlier_rate": 0.5352112676056338,
+        "min_area_overlap": 0.5094067717119628,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cbfe982dda1cdd3879125295fe69800a4cf88eb16f086a706f9e27382b5fd0e1",
+      "right_image_sha256": "69898b42b281e30f9d5c92834d5eebaff7b2725cd3faf9e199ac43de3b0e3205",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=128, inlier_rate=0.584475, min_area_overlap=0.816109.",
+      "evidence": {
+        "cosine_similarity": 0.8979970812797546,
+        "homography_inliers": 128,
+        "inlier_rate": 0.5844748858447488,
+        "min_area_overlap": 0.8161093243360313,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "69898b42b281e30f9d5c92834d5eebaff7b2725cd3faf9e199ac43de3b0e3205",
+      "right_image_sha256": "d1a44f172973ed725355cf2ee884efcf7eed23062e7bc6189f007f7b22c6660f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=135, inlier_rate=0.546559, min_area_overlap=0.802058.",
+      "evidence": {
+        "cosine_similarity": 0.9039894938468933,
+        "homography_inliers": 135,
+        "inlier_rate": 0.5465587044534413,
+        "min_area_overlap": 0.8020582857446142,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "6e63a5be883608e68f64193bc2ce4e07c57d9d600be60c0d1909d8f0aa8124ff",
+      "right_image_sha256": "73528c34f5bf535be3eb79173f9f54a16f15144e8ef21237b48233b3691fecce",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=908, inlier_rate=0.993435, min_area_overlap=0.987635.",
+      "evidence": {
+        "cosine_similarity": 0.9935052990913391,
+        "homography_inliers": 908,
+        "inlier_rate": 0.9934354485776805,
+        "min_area_overlap": 0.98763544921875,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "6ed031fd1d8418a666ef136136317293f404e79eecb9ff88036ce5fbd88ba583",
+      "right_image_sha256": "98ab72e1ac63476a208e18dfdf775ac4db160e8d36b56dfcf0e63b1cee8092b4",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=507, inlier_rate=0.781202, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9515419006347656,
+        "homography_inliers": 507,
+        "inlier_rate": 0.7812018489984591,
+        "min_area_overlap": 0.9999999813999424,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "6ed031fd1d8418a666ef136136317293f404e79eecb9ff88036ce5fbd88ba583",
+      "right_image_sha256": "9db1d11a195e27b1f58369f900c099baef8b21e04efc28fa7b2117bd8f6a4ffa",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1025, inlier_rate=0.880584, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9119243621826172,
+        "homography_inliers": 1025,
+        "inlier_rate": 0.8805841924398625,
+        "min_area_overlap": 1.0000000140563774,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "70fc49d548606040c44c8ff2acda27b4e3b4e50539ae46c1510b407dea769d6e",
+      "right_image_sha256": "eae8909c584c3b0bcaa902bd3265b4e97dd0b87986891cd2df3a73ae9424d3fd",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=38, inlier_rate=0.361905, min_area_overlap=0.939297.",
+      "evidence": {
+        "cosine_similarity": 0.9622801542282104,
+        "homography_inliers": 38,
+        "inlier_rate": 0.3619047619047619,
+        "min_area_overlap": 0.9392973152681652,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d57e9198afccfb9eb511273d2983fd6484b90e6146ae857841a243d523a25c26",
+      "right_image_sha256": "7268507e36f83daa981610b18aa6e87f27255b9eb50644d7fb0b7f6bd9fbe00a",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:57:50Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=139, inlier_rate=0.891026, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9219013452529907,
+        "homography_inliers": 139,
+        "inlier_rate": 0.8910256410256411,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a477bf5523d3ab437e628fa0c34cd66cb7d63a99d627da496734645fdb2e5280",
+      "right_image_sha256": "729086a10b634f1ec8a86d798117c9038e884323ad009c50a4b7035498cfbc82",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=415, inlier_rate=0.673701, min_area_overlap=0.390992.",
+      "evidence": {
+        "cosine_similarity": 0.9854336977005005,
+        "homography_inliers": 415,
+        "inlier_rate": 0.6737012987012987,
+        "min_area_overlap": 0.3909924560546875,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9b5ab1c8925a2a20e5079db09eacb7d11ddf355778e2691b5a8983cb97cd917a",
+      "right_image_sha256": "73b37efd0e98aab5aee5d0b691846da8dbf2a0e4fafeeddd896812459a12eeee",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=48, inlier_rate=0.888889, min_area_overlap=0.730314.",
+      "evidence": {
+        "cosine_similarity": 0.9203457832336426,
+        "homography_inliers": 48,
+        "inlier_rate": 0.8888888888888888,
+        "min_area_overlap": 0.730313950278626,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "c2425a2522890dae82eea9529474d8a0cb45c9eb7fc300dfebe71cb07de22d0b",
+      "right_image_sha256": "751b9d929b3cb26000bec94282afc7611a0a34d9b8a671a3157caca4ca5d32f8",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=40, inlier_rate=0.377358, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9129625558853149,
+        "homography_inliers": 40,
+        "inlier_rate": 0.37735849056603776,
+        "min_area_overlap": 0.999999992873516,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "b12e96a735e74a7a902d8f62a91ee31a3b0830e388548acc34c4c6064b989d77",
+      "right_image_sha256": "77d156dbb6014c0984bd775e66252420ccd03a851aaae6fea21bc0236777473d",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:54:03Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=315, inlier_rate=0.943114, min_area_overlap=0.921848.",
+      "evidence": {
+        "cosine_similarity": 0.9133727550506592,
+        "homography_inliers": 315,
+        "inlier_rate": 0.9431137724550899,
+        "min_area_overlap": 0.9218475524826848,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "fba72e3f9d302a60256ca0fcab5dd35939a791370af8c2f34400d5f4742d388f",
+      "right_image_sha256": "78b6270fdcfcc19a5ab9ba907d100cd9861176f25af1c1dfca9eddffb5847718",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=59, inlier_rate=0.457364, min_area_overlap=0.405283.",
+      "evidence": {
+        "cosine_similarity": 0.9142710566520691,
+        "homography_inliers": 59,
+        "inlier_rate": 0.4573643410852713,
+        "min_area_overlap": 0.40528263773174594,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a48638439edb0a09646a71db697554de8c0a3ff64e54cae53a7d915e195b04f1",
+      "right_image_sha256": "7928e63d925a5dfc646ce6aef477718636852227bb94169cf4491bb380f7590e",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=40, inlier_rate=0.470588, min_area_overlap=0.489511.",
+      "evidence": {
+        "cosine_similarity": 0.9204705953598022,
+        "homography_inliers": 40,
+        "inlier_rate": 0.47058823529411764,
+        "min_area_overlap": 0.4895109096692136,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "7928e63d925a5dfc646ce6aef477718636852227bb94169cf4491bb380f7590e",
+      "right_image_sha256": "e1680ceb1c9d1af4794e16f95f6a23633831d9fa7a63ada5f669d031465e97ee",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=162, inlier_rate=0.591241, min_area_overlap=0.936399.",
+      "evidence": {
+        "cosine_similarity": 0.8951608538627625,
+        "homography_inliers": 162,
+        "inlier_rate": 0.5912408759124088,
+        "min_area_overlap": 0.9363990076038544,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "7c23a391223f967a81c51a1e1c979499fdcfe49e3f34d54b9b46cc22718c7bce",
+      "right_image_sha256": "b8844a885407ab83dd05b6d6d439929a0955cae443ed993ab0496448c63dfc78",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=433, inlier_rate=0.945415, min_area_overlap=0.849948.",
+      "evidence": {
+        "cosine_similarity": 0.8745732307434082,
+        "homography_inliers": 433,
+        "inlier_rate": 0.9454148471615721,
+        "min_area_overlap": 0.8499483223964853,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "7c90d06d5f94024776cf8152e74ce6e5c04e8e11cfc094c19d6476256ebdffcd",
+      "right_image_sha256": "ed6524561d4be3086bcbcdfc269ebb2125189e94e6aec2d25ebab6a99451a4ca",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=942, inlier_rate=0.917235, min_area_overlap=0.492306.",
+      "evidence": {
+        "cosine_similarity": 0.9891296029090881,
+        "homography_inliers": 942,
+        "inlier_rate": 0.9172346640701071,
+        "min_area_overlap": 0.49230644593240624,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "7ca661e70b27dc886a0ed5f5893f0366d3951ba28355024627d06646e1db6de8",
+      "right_image_sha256": "f5b989e9141b14bf05e30aa4128abe261dee4ac8459134d7f432127cca382232",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=327, inlier_rate=0.795620, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9229568243026733,
+        "homography_inliers": 327,
+        "inlier_rate": 0.7956204379562044,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "7dc08c69f6c5ff8a748461cf565aeba192693a1f505e4a5ed641d44c93e87c09",
+      "right_image_sha256": "ac55beb1e62baf205e1c467cb1489841f84f50b266d46e2cd66ab7880e6ca83c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=675, inlier_rate=0.961538, min_area_overlap=0.994526.",
+      "evidence": {
+        "cosine_similarity": 0.922143816947937,
+        "homography_inliers": 675,
+        "inlier_rate": 0.9615384615384616,
+        "min_area_overlap": 0.9945264406149198,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a84a6e37ed7fb1ed2504c70d54ef0b14244810d7246a1d3e71ef3325bf923f6b",
+      "right_image_sha256": "7f1526bad387d70636f8f9a8aaf2dc450d74a4ee630af6836972876d331c88c5",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=305, inlier_rate=0.760599, min_area_overlap=0.320277.",
+      "evidence": {
+        "cosine_similarity": 0.9546686410903931,
+        "homography_inliers": 305,
+        "inlier_rate": 0.7605985037406484,
+        "min_area_overlap": 0.32027743938978254,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "80f27672e97674cb4091b7c3ad0da20b876389e00a3365f5b01ad3971ad34ae7",
+      "right_image_sha256": "9931ce954de3d6c8a0296ad175ac385b80fc9d694af163e5639a0107f4ccfd28",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=92, inlier_rate=0.436019, min_area_overlap=0.257296.",
+      "evidence": {
+        "cosine_similarity": 0.8904628753662109,
+        "homography_inliers": 92,
+        "inlier_rate": 0.43601895734597157,
+        "min_area_overlap": 0.25729582267294476,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d843b44c9016b7e51ef1692914dd0f8683f91c1cbaa54e4f555dab0dffdf5f28",
+      "right_image_sha256": "80f27672e97674cb4091b7c3ad0da20b876389e00a3365f5b01ad3971ad34ae7",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=70, inlier_rate=0.492958, min_area_overlap=0.475220.",
+      "evidence": {
+        "cosine_similarity": 0.9239084720611572,
+        "homography_inliers": 70,
+        "inlier_rate": 0.49295774647887325,
+        "min_area_overlap": 0.4752204386494615,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "8154e82d40b376f059bcf22201d2842c242c64e7b0f583a50fb25d9a43b4e47f",
+      "right_image_sha256": "ca0c95df26a2a255eefaab6cd7d0df5dda6edcc14554ff4f7b6d9f70a6b958bb",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=29, inlier_rate=0.500000, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9347655773162842,
+        "homography_inliers": 29,
+        "inlier_rate": 0.5,
+        "min_area_overlap": 1.000000007957059,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "93134aa639acb4cf66516a9aa710823f7d21e0bd6b262a1b6e3c10c61cf46e34",
+      "right_image_sha256": "817e8b37d5f07d4f3d273d52e892ba2c421f20575d9bf4ad836f23a34f3e26fc",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=98, inlier_rate=0.560000, min_area_overlap=0.819058.",
+      "evidence": {
+        "cosine_similarity": 0.9040539264678955,
+        "homography_inliers": 98,
+        "inlier_rate": 0.56,
+        "min_area_overlap": 0.8190580965462266,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "f4eac9ad893b9e2fb28f387505c070e6658d56d4c678efe7cd161f93caefaabc",
+      "right_image_sha256": "841de46e538248c26f17d449ae7a4b70f8df72e9fd74bb2d9a88fce11dd78e3e",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=372, inlier_rate=0.796574, min_area_overlap=0.559698.",
+      "evidence": {
+        "cosine_similarity": 0.84498530626297,
+        "homography_inliers": 372,
+        "inlier_rate": 0.7965738758029979,
+        "min_area_overlap": 0.5596975814869454,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "97da1d79a1649917acf16dfeb370c5d6e2280e9f2245ebdd9cccee60307154d6",
+      "right_image_sha256": "8428ff3b241af767489534c32b0ad0dcc57c137426bb7ea4c9832ba429fe1935",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=124, inlier_rate=0.659574, min_area_overlap=0.864238.",
+      "evidence": {
+        "cosine_similarity": 0.9357559680938721,
+        "homography_inliers": 124,
+        "inlier_rate": 0.6595744680851063,
+        "min_area_overlap": 0.8642384036571841,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "8428ff3b241af767489534c32b0ad0dcc57c137426bb7ea4c9832ba429fe1935",
+      "right_image_sha256": "e39a44e12e5d82c9c52bfda585c000c64f029161a81946e7efd669761eec5bd7",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=230, inlier_rate=0.793103, min_area_overlap=0.572290.",
+      "evidence": {
+        "cosine_similarity": 0.9438284635543823,
+        "homography_inliers": 230,
+        "inlier_rate": 0.7931034482758621,
+        "min_area_overlap": 0.5722904255271087,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "89f17852f2f88ca372305ac18b8ead5ace8827c61e3229165bdc20c297a9608b",
+      "right_image_sha256": "ea9751f087717a8df52dd56f4e0cb92d1839158b5c72d3e23da885d376bfac0a",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=223, inlier_rate=0.733553, min_area_overlap=0.479060.",
+      "evidence": {
+        "cosine_similarity": 0.9086185693740845,
+        "homography_inliers": 223,
+        "inlier_rate": 0.7335526315789473,
+        "min_area_overlap": 0.47906017024591074,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "8bbb421a9ef1b1e5735e4c6af7365d64e09f23c5f5178ce7348f8265c8a286ae",
+      "right_image_sha256": "ed59f0aecd27bad723229c4484d724189ffbc6dc839e88cc74f8a55d1709c310",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=399, inlier_rate=0.666110, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9658028483390808,
+        "homography_inliers": 399,
+        "inlier_rate": 0.666110183639399,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "8c581b61e3d1a9efe0f1b44efe7721dd6557c934365b9d5b230b428421ba22f7",
+      "right_image_sha256": "b759ebae4cd2f54ffa808105c522db0b86ff963db97369fbb3b1e5ff805d9944",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1036, inlier_rate=0.909570, min_area_overlap=0.557610.",
+      "evidence": {
+        "cosine_similarity": 0.9348891973495483,
+        "homography_inliers": 1036,
+        "inlier_rate": 0.9095697980684812,
+        "min_area_overlap": 0.5576098056308114,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "faf23d847ebe7dfa8cf258384f0a4c3f95e6cd26d169e886393316ca5cdedb2e",
+      "right_image_sha256": "8c581b61e3d1a9efe0f1b44efe7721dd6557c934365b9d5b230b428421ba22f7",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:54:03Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=274, inlier_rate=0.886731, min_area_overlap=0.386056.",
+      "evidence": {
+        "cosine_similarity": 0.9442667365074158,
+        "homography_inliers": 274,
+        "inlier_rate": 0.8867313915857605,
+        "min_area_overlap": 0.386055841503268,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d9922601b61962bf66efef8f4871c799ead6741fa875644a99445e247c1903d6",
+      "right_image_sha256": "8e23a0410815818ee2a4aaf29f8c813eab7893506fdabe87ac937e681c6c7db6",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1896, inlier_rate=0.958060, min_area_overlap=0.986652.",
+      "evidence": {
+        "cosine_similarity": 0.9856001138687134,
+        "homography_inliers": 1896,
+        "inlier_rate": 0.9580596260737746,
+        "min_area_overlap": 0.9866515625,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a800dac5d0f579cf700b2ddde4757a17572b5b30f43de65525ca2287c03dde9d",
+      "right_image_sha256": "8f7d701b2b4c9b287f921ccb86814428f12bb5c55e252f0c9024e086587c1fd8",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=33, inlier_rate=0.417722, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9297340512275696,
+        "homography_inliers": 33,
+        "inlier_rate": 0.4177215189873418,
+        "min_area_overlap": 0.9999999547684223,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d480b2d877ed2f47d8cc8334b9d74034373d4511d4aacc4ad4f0a7a4239a65a0",
+      "right_image_sha256": "9097b7b1ebd07f772c73c767a4a8903e783f80df60849246015550f9b67b56db",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=917, inlier_rate=0.938588, min_area_overlap=0.976360.",
+      "evidence": {
+        "cosine_similarity": 0.9922032356262207,
+        "homography_inliers": 917,
+        "inlier_rate": 0.9385875127942682,
+        "min_area_overlap": 0.9763604493665843,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "952cc93d927bca3147b43ac24c8ebc63452e2eca32ea5f2bff8ccace747d44ba",
+      "right_image_sha256": "a94d9b46411bef0b95e780ba485547b4c7cb38c9bfd4454b6ccc67e09522a305",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=52, inlier_rate=0.812500, min_area_overlap=0.977674.",
+      "evidence": {
+        "cosine_similarity": 0.9009127616882324,
+        "homography_inliers": 52,
+        "inlier_rate": 0.8125,
+        "min_area_overlap": 0.9776737167135945,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d51979cc56fd868ac2d8fa7013d147bb70888a50ccfb47a8f36fc2fbf4f0ca6c",
+      "right_image_sha256": "952da5ce63b14d9b531779abbd113e64cf44916f45663fd21174b7ff0895f1b8",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1264, inlier_rate=0.988272, min_area_overlap=0.899975.",
+      "evidence": {
+        "cosine_similarity": 0.9941357374191284,
+        "homography_inliers": 1264,
+        "inlier_rate": 0.9882720875684128,
+        "min_area_overlap": 0.89997490234375,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d480b2d877ed2f47d8cc8334b9d74034373d4511d4aacc4ad4f0a7a4239a65a0",
+      "right_image_sha256": "96b3471afe88abb67658b2f5116dbd99728ef534229cf0d40bc4be01e85a9560",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=532, inlier_rate=0.828660, min_area_overlap=0.647591.",
+      "evidence": {
+        "cosine_similarity": 0.9732171297073364,
+        "homography_inliers": 532,
+        "inlier_rate": 0.8286604361370716,
+        "min_area_overlap": 0.6475907761017974,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9931ce954de3d6c8a0296ad175ac385b80fc9d694af163e5639a0107f4ccfd28",
+      "right_image_sha256": "c11878009adc87b6c852b79e0c06bf9fb241ed8eb7cee556b711bf7190485da2",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=90, inlier_rate=0.762712, min_area_overlap=0.695104.",
+      "evidence": {
+        "cosine_similarity": 0.9293073415756226,
+        "homography_inliers": 90,
+        "inlier_rate": 0.7627118644067796,
+        "min_area_overlap": 0.6951041981308819,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cdb8df327b53e971e77b39e0cc5a91238a466e9c5cac2f344bd8a38ed7d76085",
+      "right_image_sha256": "9931ce954de3d6c8a0296ad175ac385b80fc9d694af163e5639a0107f4ccfd28",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=44, inlier_rate=0.745763, min_area_overlap=0.305642.",
+      "evidence": {
+        "cosine_similarity": 0.8293638229370117,
+        "homography_inliers": 44,
+        "inlier_rate": 0.7457627118644068,
+        "min_area_overlap": 0.30564248935154675,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "b86a2afc75c086529ef27eb116cedccafb6d29aa718311662288a8fa1c41cd11",
+      "right_image_sha256": "994030c597b2bcd586db8d054cc6787d95c8f50995dde2c3eb853193034b727d",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=396, inlier_rate=0.954217, min_area_overlap=0.869075.",
+      "evidence": {
+        "cosine_similarity": 0.9039145708084106,
+        "homography_inliers": 396,
+        "inlier_rate": 0.9542168674698795,
+        "min_area_overlap": 0.8690746589720094,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a7d7306201edb1c8b2dd784938939d7073c0cdd8ca21f4ea9e74218a2f2ce5ba",
+      "right_image_sha256": "9a9688612d096724635730be282857578f741965b9cdc617f49e7f85d4ae3752",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=62, inlier_rate=0.488189, min_area_overlap=0.562102.",
+      "evidence": {
+        "cosine_similarity": 0.8832271695137024,
+        "homography_inliers": 62,
+        "inlier_rate": 0.4881889763779528,
+        "min_area_overlap": 0.5621022603423136,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "ad9c61f3388cba86634b9f8f4bd66b0eefd82757ffd53f4e31d4ecdf480a9eca",
+      "right_image_sha256": "9ae88e63e7dd957e89b3dbcd177173f2588604c4f178bc014508226f8eb6258b",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=92, inlier_rate=0.652482, min_area_overlap=0.668227.",
+      "evidence": {
+        "cosine_similarity": 0.924504816532135,
+        "homography_inliers": 92,
+        "inlier_rate": 0.6524822695035462,
+        "min_area_overlap": 0.6682270390650488,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9b0b78a5f958d4f2b9ab5b39cefcaa991ae24cc8667a1d55c56585c6a627d4b7",
+      "right_image_sha256": "c2a65bd2ae30626a230c1468ac6f620be7a7db6b43e5667b846986529e2a347a",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=75, inlier_rate=0.576923, min_area_overlap=0.519831.",
+      "evidence": {
+        "cosine_similarity": 0.9473998546600342,
+        "homography_inliers": 75,
+        "inlier_rate": 0.5769230769230769,
+        "min_area_overlap": 0.5198309224789665,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9b5ab1c8925a2a20e5079db09eacb7d11ddf355778e2691b5a8983cb97cd917a",
+      "right_image_sha256": "b0d0e1940784eaff859ad5fd7c7a08d9b5fd9c77981db3a951cab9a303757323",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=35, inlier_rate=0.744681, min_area_overlap=0.681949.",
+      "evidence": {
+        "cosine_similarity": 0.9241037964820862,
+        "homography_inliers": 35,
+        "inlier_rate": 0.7446808510638298,
+        "min_area_overlap": 0.681948582162982,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9b5ab1c8925a2a20e5079db09eacb7d11ddf355778e2691b5a8983cb97cd917a",
+      "right_image_sha256": "b82360f0df61f43258fbbd9eb1a65603a202f2d9d2aabd7436237e335bda10cf",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=21, inlier_rate=0.700000, min_area_overlap=0.350109.",
+      "evidence": {
+        "cosine_similarity": 0.9223290681838989,
+        "homography_inliers": 21,
+        "inlier_rate": 0.7,
+        "min_area_overlap": 0.35010907729975854,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "bd031543e41d3892ede9e1a847f7aaf7a686d6a34d3b213bfaac57a69412cf09",
+      "right_image_sha256": "9baeba9f4762697433273554e7c5be4f8c55baf92f1b4a0c9489a8effd0d955b",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=242, inlier_rate=0.909774, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9172660112380981,
+        "homography_inliers": 242,
+        "inlier_rate": 0.9097744360902256,
+        "min_area_overlap": 1.0000000535822278,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "9d93eb29f18650c01f2c8be8bd7f990583ed057d816589c4f2e8e939455f6afb",
+      "right_image_sha256": "a674ec5746a36f92ae45b45d424c58b28311fb6da70089639b10a1d11f5965fd",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=91, inlier_rate=0.694656, min_area_overlap=0.334884.",
+      "evidence": {
+        "cosine_similarity": 0.8771873712539673,
+        "homography_inliers": 91,
+        "inlier_rate": 0.6946564885496184,
+        "min_area_overlap": 0.334883735574356,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "b311afbcccfffeadac2428d36eee9146d08fb22d67f7876ff649af01dd926e8a",
+      "right_image_sha256": "a48638439edb0a09646a71db697554de8c0a3ff64e54cae53a7d915e195b04f1",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=121, inlier_rate=0.672222, min_area_overlap=0.967739.",
+      "evidence": {
+        "cosine_similarity": 0.9432002902030945,
+        "homography_inliers": 121,
+        "inlier_rate": 0.6722222222222223,
+        "min_area_overlap": 0.9677392024897649,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "a94d9b46411bef0b95e780ba485547b4c7cb38c9bfd4454b6ccc67e09522a305",
+      "right_image_sha256": "d11b15dc93ac6f6b141f51572f0c7b75e10a4b2a6c2fc07e3c3e0dda58b7421f",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=639, inlier_rate=0.922078, min_area_overlap=0.969834.",
+      "evidence": {
+        "cosine_similarity": 0.9304760098457336,
+        "homography_inliers": 639,
+        "inlier_rate": 0.922077922077922,
+        "min_area_overlap": 0.969834205261116,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "b4112e425ad2a3c7df601b3c62958004fbe821a77a04ff88170cd64b6e26a54c",
+      "right_image_sha256": "aadafe2d093bbf78aec29150ace6ca2c18d94ad054acad01723a311d17265c0b",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=127, inlier_rate=0.625616, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9437215924263,
+        "homography_inliers": 127,
+        "inlier_rate": 0.625615763546798,
+        "min_area_overlap": 0.9999999506073121,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d1447f82c3d32ef49f59352a2e4b49089166945dfcd935d211d2870161ccdb4d",
+      "right_image_sha256": "ab4722a704d386635a26454b6f6859f3ac05aec88a3e987d27c304210317c092",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=25, inlier_rate=0.520833, min_area_overlap=0.823276.",
+      "evidence": {
+        "cosine_similarity": 0.8545038104057312,
+        "homography_inliers": 25,
+        "inlier_rate": 0.5208333333333334,
+        "min_area_overlap": 0.8232764151295797,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "b3354d12fbf68226138d846eeeb1373839fa64b93c4d63efc18b4a18800b91bc",
+      "right_image_sha256": "abdc5fee5544c972e17a070f7762286bb14ab06ca9fcfb083c6f88bde6264cfb",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=22, inlier_rate=0.564103, min_area_overlap=0.385318.",
+      "evidence": {
+        "cosine_similarity": 0.8820745944976807,
+        "homography_inliers": 22,
+        "inlier_rate": 0.5641025641025641,
+        "min_area_overlap": 0.38531797981095756,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "ac55beb1e62baf205e1c467cb1489841f84f50b266d46e2cd66ab7880e6ca83c",
+      "right_image_sha256": "c2c6eec6fd988a7ddf4d03bccca1d88f31f4ed4edc5fa6c3dcfe419fbea9d560",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=195, inlier_rate=0.874439, min_area_overlap=1.000000.",
+      "evidence": {
+        "cosine_similarity": 0.9455546736717224,
+        "homography_inliers": 195,
+        "inlier_rate": 0.874439461883408,
+        "min_area_overlap": 1.0,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "ad9c61f3388cba86634b9f8f4bd66b0eefd82757ffd53f4e31d4ecdf480a9eca",
+      "right_image_sha256": "c4f196e8999cc202d5a21500f82167a70137e1c3d136235281fadeff9de5aac5",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=76, inlier_rate=0.617886, min_area_overlap=0.556896.",
+      "evidence": {
+        "cosine_similarity": 0.9365983009338379,
+        "homography_inliers": 76,
+        "inlier_rate": 0.6178861788617886,
+        "min_area_overlap": 0.5568958589828286,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "ad9c61f3388cba86634b9f8f4bd66b0eefd82757ffd53f4e31d4ecdf480a9eca",
+      "right_image_sha256": "faa20c7e207fbae41e3ee6619fc15aa2702aa94fb51fb9ccfb6130ca95b9c8f4",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=75, inlier_rate=0.675676, min_area_overlap=0.821713.",
+      "evidence": {
+        "cosine_similarity": 0.9483667612075806,
+        "homography_inliers": 75,
+        "inlier_rate": 0.6756756756756757,
+        "min_area_overlap": 0.8217128229077123,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "ce9e5e7798fbaa53876cd6b30b8c447040d2843a473ab326e84cff6eb7e38338",
+      "right_image_sha256": "ae794d4c8680604a5fbfcdb3f327fd1dfcc21eafb26951c1ef83361c23477737",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1402, inlier_rate=0.977685, min_area_overlap=0.863801.",
+      "evidence": {
+        "cosine_similarity": 0.9854328036308289,
+        "homography_inliers": 1402,
+        "inlier_rate": 0.9776847977684798,
+        "min_area_overlap": 0.863801114690316,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "e88ea06cd67be28cd53cb3fbe17a07c700946a513c0d9bedc44f54e6781c9515",
+      "right_image_sha256": "b9e06b8ccdf3642996257925d99c6df77f11716da6ff05d815ec9b50a338210c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=351, inlier_rate=0.780000, min_area_overlap=0.373571.",
+      "evidence": {
+        "cosine_similarity": 0.9372939467430115,
+        "homography_inliers": 351,
+        "inlier_rate": 0.78,
+        "min_area_overlap": 0.3735713050476564,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "f7754fbaf0afcf44f6c5e9237cda461e0b28099b8cc4992185e77abb5e1c06d9",
+      "right_image_sha256": "bcb5790c001ee6623c5f031be17fcebf2bcbbaa214f3b1226b12f70d78dd8b48",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=872, inlier_rate=0.933619, min_area_overlap=0.311301.",
+      "evidence": {
+        "cosine_similarity": 0.9539918899536133,
+        "homography_inliers": 872,
+        "inlier_rate": 0.9336188436830836,
+        "min_area_overlap": 0.3113009684716676,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "c0b78372d00fae4df8459ac06eb9768420718a5feac1a548c54e82abdb8606e3",
+      "right_image_sha256": "f7b540d5fbe5e34e3df6bd8480fc4eeafe787b1c7dfd471760a60d1838af8e5c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=206, inlier_rate=0.944954, min_area_overlap=0.328841.",
+      "evidence": {
+        "cosine_similarity": 0.9189490675926208,
+        "homography_inliers": 206,
+        "inlier_rate": 0.944954128440367,
+        "min_area_overlap": 0.328841159917523,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "e31a0e16b114fe83abe127a1ce8c9556d136d64c158d3ba06c0f500e8222f9e1",
+      "right_image_sha256": "c4bb712fc3104a2302f9a0915b8000e525a00978a06289701380c560c32c4133",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=623, inlier_rate=0.924332, min_area_overlap=0.284120.",
+      "evidence": {
+        "cosine_similarity": 0.9591192007064819,
+        "homography_inliers": 623,
+        "inlier_rate": 0.9243323442136498,
+        "min_area_overlap": 0.2841200050607517,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "dba6d8f82473bc28d5846ab3090cc275848b7336eb37eb5c15cdfe1467c53154",
+      "right_image_sha256": "c5148999bf81d689531bc599aefced9b6ff41634ca4e1ff3456c0a964d6b70ac",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:50:24Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=185, inlier_rate=0.558912, min_area_overlap=0.221557.",
+      "evidence": {
+        "cosine_similarity": 0.9830626845359802,
+        "homography_inliers": 185,
+        "inlier_rate": 0.5589123867069486,
+        "min_area_overlap": 0.2215571278561914,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "edd79c827b04b83cbf36c065141b7a2350f7e16cbc1d0dad47610ccd22db0656",
+      "right_image_sha256": "c6a1d52410cb93350794281e443eab26d9cfae23bb439550e32e9b2403a14378",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=482, inlier_rate=0.707783, min_area_overlap=0.849627.",
+      "evidence": {
+        "cosine_similarity": 0.9245309829711914,
+        "homography_inliers": 482,
+        "inlier_rate": 0.7077826725403817,
+        "min_area_overlap": 0.8496269434049613,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "e9c9b9d844fd0c6c54d78a3036cfeac0f334df944dcf20bfb6c9c534285e2ea2",
+      "right_image_sha256": "c835adf47155ff578aec01e8d53f4b0c985e9e18c8717075007848ee2c174fbc",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1461, inlier_rate=0.970764, min_area_overlap=0.952994.",
+      "evidence": {
+        "cosine_similarity": 0.9844796061515808,
+        "homography_inliers": 1461,
+        "inlier_rate": 0.9707641196013289,
+        "min_area_overlap": 0.9529938322468762,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "c992a94b0520a184d450402ec577e95aef40351b347fa6b150f1216e4c41ae28",
+      "right_image_sha256": "e5107d11a8834252b854081d35909349a4b039b08e3895079b5b60654f1613f3",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=571, inlier_rate=0.915064, min_area_overlap=0.372114.",
+      "evidence": {
+        "cosine_similarity": 0.961258590221405,
+        "homography_inliers": 571,
+        "inlier_rate": 0.9150641025641025,
+        "min_area_overlap": 0.3721143619634313,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cd9f5e5020e7e89fa3f3db4a6719626de4618e38ef3c42360e320f50942e3088",
+      "right_image_sha256": "fe92822e9d404037ad3919cc2404c416c212e8f37f0f1a2b79b52b5f564ce7c9",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=789, inlier_rate=0.966912, min_area_overlap=0.558378.",
+      "evidence": {
+        "cosine_similarity": 0.9463697671890259,
+        "homography_inliers": 789,
+        "inlier_rate": 0.9669117647058824,
+        "min_area_overlap": 0.5583779591836735,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "cdb8df327b53e971e77b39e0cc5a91238a466e9c5cac2f344bd8a38ed7d76085",
+      "right_image_sha256": "cea1acb7d0e6e5fb4550d6165754d85e7dfb7f66043f4a75be68264f36258b7c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=39, inlier_rate=0.475610, min_area_overlap=0.334521.",
+      "evidence": {
+        "cosine_similarity": 0.8603451251983643,
+        "homography_inliers": 39,
+        "inlier_rate": 0.47560975609756095,
+        "min_area_overlap": 0.3345214497888987,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "eb5a318953ab8b404b7cc7869df74e0525cdbe1fca6b50a7f9d85532d810536a",
+      "right_image_sha256": "cee32b4d2224f608ba32f5105fbcde12c317669f165aaf29714c2a322d131216",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=43, inlier_rate=0.434343, min_area_overlap=0.512334.",
+      "evidence": {
+        "cosine_similarity": 0.9702313542366028,
+        "homography_inliers": 43,
+        "inlier_rate": 0.43434343434343436,
+        "min_area_overlap": 0.5123341083526611,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d1bdfa53d5ecaac830aeae229f9b0c5e998fada83add36a39a9de71ab228eab4",
+      "right_image_sha256": "edd79c827b04b83cbf36c065141b7a2350f7e16cbc1d0dad47610ccd22db0656",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1402, inlier_rate=0.922976, min_area_overlap=0.745946.",
+      "evidence": {
+        "cosine_similarity": 0.9686012268066406,
+        "homography_inliers": 1402,
+        "inlier_rate": 0.9229756418696511,
+        "min_area_overlap": 0.7459459724123311,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "e41caaad82f83aeb8943ff3ee3946057d6e6f938f98d0f56529e6ce1e772003d",
+      "right_image_sha256": "d55174c2bee9e4459a90288dae6a68943f8f9046ef9e2ef598d1310a83eb49d9",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:46:46Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=268, inlier_rate=0.837500, min_area_overlap=0.410348.",
+      "evidence": {
+        "cosine_similarity": 0.9703927040100098,
+        "homography_inliers": 268,
+        "inlier_rate": 0.8375,
+        "min_area_overlap": 0.4103481549388691,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "d882c390c331e51d8510deff0033a5a47a67f0c091506ecd1d9ba1e163acd959",
+      "right_image_sha256": "ee685edd057aa29ca2969ae08779d1656f58c8c170e0ae78723678df43589915",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:54:03Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=129, inlier_rate=0.586364, min_area_overlap=0.982464.",
+      "evidence": {
+        "cosine_similarity": 0.9022269248962402,
+        "homography_inliers": 129,
+        "inlier_rate": 0.5863636363636363,
+        "min_area_overlap": 0.9824643415096871,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "e7fd33b44c5b7249db35171d5d088840063e20c4d1cfad228b409135c07ac395",
+      "right_image_sha256": "d95da3fde06a5ff89ba9f96be113a30be720efc18ef06193132b381433aad0da",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=288, inlier_rate=0.969697, min_area_overlap=0.614941.",
+      "evidence": {
+        "cosine_similarity": 0.9691348075866699,
+        "homography_inliers": 288,
+        "inlier_rate": 0.9696969696969697,
+        "min_area_overlap": 0.6149405589627506,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "da29786dc62a31600de30244f114f61e6a99f6f7fe411bdb172d39573b6d91f5",
+      "right_image_sha256": "e1680ceb1c9d1af4794e16f95f6a23633831d9fa7a63ada5f669d031465e97ee",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:36:14Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=51, inlier_rate=0.366906, min_area_overlap=0.984157.",
+      "evidence": {
+        "cosine_similarity": 0.8954318761825562,
+        "homography_inliers": 51,
+        "inlier_rate": 0.3669064748201439,
+        "min_area_overlap": 0.9841571195109147,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "f42112d9bc2a9800c8905892d349c1965f0a309bb22ecc759b3afb4536407504",
+      "right_image_sha256": "feafb357818eedd30728b9e3c1a67f5c793dbcb7b54b7eb281669acd6f742c9c",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=2212, inlier_rate=0.948949, min_area_overlap=0.911350.",
+      "evidence": {
+        "cosine_similarity": 0.9857803583145142,
+        "homography_inliers": 2212,
+        "inlier_rate": 0.948948948948949,
+        "min_area_overlap": 0.9113504047945801,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "f4eac9ad893b9e2fb28f387505c070e6658d56d4c678efe7cd161f93caefaabc",
+      "right_image_sha256": "fe91c65b71c9f7f07e3cdde90407f8098581e367f99e38d8237046c88f7bb07e",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:25:47Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=1138, inlier_rate=0.959528, min_area_overlap=0.499025.",
+      "evidence": {
+        "cosine_similarity": 0.8852084279060364,
+        "homography_inliers": 1138,
+        "inlier_rate": 0.9595278246205734,
+        "min_area_overlap": 0.499024799711842,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    },
+    {
+      "left_image_sha256": "fd7bdd210e2dd54251f47169cc8e35d9308aad84b7d54cbf90000aa55de5cacd",
+      "right_image_sha256": "fe3ffb29e18dca5a18de61b1334b1024fe2d20a4b24401e4cc1e3d289bd58c9b",
+      "decision": "same_scene_union",
+      "reviewer": "sift_ransac_v1_with_manual_spot_check",
+      "reviewed_at_utc": "2026-08-11T00:10:56Z",
+      "rationale": "DINO candidate verified by SIFT homography: inliers=53, inlier_rate=0.452991, min_area_overlap=0.664225.",
+      "evidence": {
+        "cosine_similarity": 0.9336764812469482,
+        "homography_inliers": 53,
+        "inlier_rate": 0.452991452991453,
+        "min_area_overlap": 0.6642252379883538,
+        "thresholds": {
+          "inliers": 20,
+          "inlier_rate": 0.35,
+          "min_area_overlap": 0.2
+        }
+      }
+    }
+  ]
+}

@@ -12,6 +12,12 @@ from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 
 from .common import image_to_label_path, letterbox, load_config, read_yolo_labels, resolve_data_yaml, split_image_dir, transform_boxes_to_letterbox
+from .provenance import (
+    require_teacher_compatible,
+    resolve_dataset_identity,
+    teacher_provenance,
+    teacher_run_dir,
+)
 from .teacher import DINOFeatureTeacher
 
 
@@ -109,15 +115,23 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Train the DINOv3-SAT object-level feature teacher.")
     parser.add_argument("--config", default="configs/experiment.yaml")
     parser.add_argument("--epochs", type=int, default=None)
-    parser.add_argument("--resume", nargs="?", const="auto", default=None, help="Resume the full epoch checkpoint. Omit a value to use runs/teacher/last.pt.")
+    parser.add_argument(
+        "--resume",
+        nargs="?",
+        const="auto",
+        default=None,
+        help="Resume the full epoch checkpoint. V3 auto-resume uses its fingerprint-namespaced teacher/last.pt.",
+    )
     args = parser.parse_args()
     cfg = load_config(args.config); data = resolve_data_yaml(cfg)
-    root = Path(cfg["paths"]["project_root"]); output = root / "runs" / "teacher"
+    identity = resolve_dataset_identity(cfg)
+    output = teacher_run_dir(cfg, identity)
     output.mkdir(parents=True, exist_ok=True)
     image_size = cfg["dataset"]["image_size"]
     tcfg = cfg["teacher"]
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     seed = int(cfg["student"].get("seed", 0))
+    expected_provenance = teacher_provenance(cfg, identity)
     random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
@@ -139,6 +153,9 @@ def main() -> None:
         missing = required.difference(checkpoint)
         if missing:
             raise RuntimeError(f"{resume_path} is not a full resumable teacher checkpoint; missing {sorted(missing)}")
+        require_teacher_compatible(
+            checkpoint, expected_provenance, strict=bool(identity.get("strict"))
+        )
         model.load_state_dict(checkpoint["model"], strict=True)
         optimizer.load_state_dict(checkpoint["optimizer"]); scheduler.load_state_dict(checkpoint["scheduler"])
         scaler.load_state_dict(checkpoint["scaler"]); restore_rng_state(checkpoint["rng_state"], loader_generator)
@@ -174,6 +191,7 @@ def main() -> None:
             "model": model.state_dict(), "optimizer": optimizer.state_dict(), "scheduler": scheduler.state_dict(),
             "scaler": scaler.state_dict(), "rng_state": capture_rng_state(loader_generator), "epoch": epoch + 1,
             "best_acc": best_acc, "val_roi_acc": accuracy, "target_epochs": target_epochs, "config": cfg,
+            "provenance": expected_provenance,
         }
         torch.save(state, output / "last.pt")
         if is_best:

@@ -4,6 +4,7 @@ import argparse
 from pathlib import Path
 
 from .common import load_config
+from .provenance import inject_discovered_fingerprints
 
 
 def main() -> None:
@@ -39,6 +40,10 @@ def main() -> None:
     missing = [name for name, value in config["paths"].items() if name != "project_root" and not Path(value).exists()]
     if missing:
         parser.error(f"Missing required path(s): {', '.join(missing)}")
+    try:
+        inject_discovered_fingerprints(config)
+    except (OSError, RuntimeError, ValueError) as error:
+        parser.error(f"Dataset provenance validation failed: {error}")
 
     import yaml
     output = Path(args.out)
