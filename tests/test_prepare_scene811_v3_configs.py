@@ -19,7 +19,7 @@ def test_baseline_matrix_is_portable_and_has_two_matched_recipes(tmp_path: Path)
         json.dumps(
             {
                 "training_ready": True,
-                "dataset_id": "scene811_v3_grouped_clean",
+                "dataset_id": "scene811_v3_grouped_clean_r10",
                 "dataset_fingerprint": FINGERPRINT,
             }
         ),
@@ -28,7 +28,7 @@ def test_baseline_matrix_is_portable_and_has_two_matched_recipes(tmp_path: Path)
     (dataset / "dataset_fingerprint.json").write_text(
         json.dumps(
             {
-                "dataset_id": "scene811_v3_grouped_clean",
+                "dataset_id": "scene811_v3_grouped_clean_r10",
                 "dataset_fingerprint": FINGERPRINT,
                 "split_fingerprint": SPLIT_FINGERPRINT,
             }
@@ -56,7 +56,7 @@ def test_baseline_matrix_is_portable_and_has_two_matched_recipes(tmp_path: Path)
     assert {item["recipe"] for item in result["baseline_trials"]} == {"official", "mix"}
     assert {item["seed"] for item in result["baseline_trials"]} == {42, 3407, 20260809}
     generated = yaml.safe_load((output / "baseline_mix_seed42.yaml").read_text("utf-8"))
-    assert generated["dataset_id"] == "scene811_v3_grouped_clean"
+    assert generated["dataset_id"] == "scene811_v3_grouped_clean_r10"
     assert generated["dataset_fingerprint"] == FINGERPRINT
     assert generated["data"] == str((dataset / "dataset.yaml").resolve())
 

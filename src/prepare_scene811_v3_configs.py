@@ -31,8 +31,13 @@ def _load_training_ready_dataset(root: Path) -> tuple[Path, dict, dict]:
     fingerprint = json.loads(fingerprint_path.read_text(encoding="utf-8"))
     if audit.get("training_ready") is not True:
         raise RuntimeError(f"Dataset D0 did not pass: {audit_path}")
-    if audit.get("dataset_id") != "scene811_v3_grouped_clean":
-        raise RuntimeError(f"Unexpected dataset id in {audit_path}: {audit.get('dataset_id')!r}")
+    audit_dataset_id = str(audit.get("dataset_id", ""))
+    fingerprint_dataset_id = str(fingerprint.get("dataset_id", ""))
+    if not audit_dataset_id or audit_dataset_id != fingerprint_dataset_id:
+        raise RuntimeError(
+            "D0 and dataset_fingerprint.json identify different dataset ids: "
+            f"{audit_dataset_id!r} != {fingerprint_dataset_id!r}."
+        )
     if audit.get("dataset_fingerprint") != fingerprint.get("dataset_fingerprint"):
         raise RuntimeError("D0 and dataset_fingerprint.json identify different datasets.")
     for name in ("dataset.yaml", "dataset_official.yaml", "split_manifest.csv"):
